@@ -1,0 +1,15 @@
+.ui-button{
+  padding: 20px;
+  border: 1px solid #37474f;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  &__text{
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}

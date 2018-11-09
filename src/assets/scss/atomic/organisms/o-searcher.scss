@@ -1,0 +1,36 @@
+.o-searcher{
+  background: rgba(0,0,0,0.50);
+  border-radius: 2px;
+  padding: 4px;
+  &__row{
+    display: flex;
+  }
+  &__field{
+    margin-right: 4px;
+    &--destination{
+      flex: 1;
+    }
+    &--button{
+      .a-button{
+        height: 100%;
+      }
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.a-input-placeholder{
+  border: none;
+  height: 45px;
+  border-radius: 2px;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  &::-webkit-input-placeholder{
+    color: #1e272e;
+    font-size: 12px;
+    font-family: $font-bold;
+  }
+}

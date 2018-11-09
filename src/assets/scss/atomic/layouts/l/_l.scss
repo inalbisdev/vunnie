@@ -1,0 +1,31 @@
+@import "../../../vars/glob";
+
+.l{
+  max-width: 100%;
+  &--fit{
+    max-width: $l__container-max-width;
+    padding-left: $l__container-left-padding;
+    padding-right: $l__container-right-padding;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 899px){
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    @media (max-width: 480px){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+  }
+
+
+
+  &-main{
+    &__main{
+      padding-top: 60px; // Header height
+    }
+  }
+}
+

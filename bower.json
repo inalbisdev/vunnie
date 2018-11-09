@@ -1,0 +1,9 @@
+{
+  "name": "base-maqueta",
+  "version": "1.0.0",
+  "author": "HCI DISEÑO",
+  "devDependencies": {
+    "normalize-scss": "^3.0.3"
+
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../../vars/default/default";
+
+.a-input{
+  border: 1px solid #979797;
+  background-color: $color-white;
+  width: 100%;
+  height: 40px;
+  color: #333;
+  padding: 0 15px;
+  border-radius: 3px;
+  font-size: 16px;
+
+}
+
+label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+
+
+input:focus {
+  outline: 0;
+}
+
+label {
+  text-transform: none;
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+/**
+* By default, the placeholder should be transparent. Also, it should
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+  opacity: 1;
+  transition: inherit;
+  font-size: 14px;
+  color: #9B9B9B;
+  font-weight: 700;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+  & + .m-field__error{
+    //display: none;
+  }
+}

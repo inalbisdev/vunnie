@@ -1,0 +1,140 @@
+---
+layout: default
+title: Vunnie | Home
+page: Home
+---
+
+
+{{>o-hero}}
+
+<section class="l l--fit u-mb-40">
+    <div class="m-heading">
+        <h3 class="a-typo-tesla a-typo-medium u-mb-12">
+            Hemos nacido en <span class="a-typo-bold a-color-secondary">Barcelona</span>, pero llegamos a todo el mundo!
+        </h3>
+        <h4 class="a-typo-bold a-typo-hawking">
+            Barcelona - Madrid - París - Londres - Nueva York - San Francisco
+        </h4>
+    </div>
+    <div class="m-parallax">
+        <picture class="m-parallax__media">
+            <img class="lazyload" data-src="{{root}}assets/media/images/home/san-francisco-parallax.jpg"
+                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        </picture>
+        <h3 class="m-parallax__title">
+            Discover San Francisco
+        </h3>
+    </div>
+</section>
+
+
+<!-- Seccion Ciudades -->
+<section class="l l--fit u-mb-40">
+    <div class="m-heading">
+        <h3 class="a-typo-edison a-typo-bold">
+            Ciudades pricipales
+        </h3>
+    </div>
+
+    <div class="o-cities">
+        <a href="#" class="m-media-card">
+
+            {{> a-picture
+                    class="m-media-card__media"
+                    overlay="true"
+                    url="assets/media/images/home/barcelona-city.jpg"
+            }}
+
+            <div class="m-media-card__content">
+                <h3 class="a-typo-bold u-mb-4">
+                    Barcelona
+                </h3>
+                <span class="a-typo-einstein">
+                    85€ / precio medio por noche
+                </span>
+            </div>
+        </a>
+        <a href="#" class="m-media-card">
+
+            {{> a-picture
+                    class="m-media-card__media"
+                    overlay="true"
+                    url="assets/media/images/home/madrid-city.jpg"
+            }}
+            <div class="m-media-card__content">
+                <h3 class="a-typo-bold u-mb-4">
+                    Madrid
+                </h3>
+                <span class="a-typo-einstein">
+                    64€ / precio medio por noche
+                </span>
+            </div>
+        </a>
+        <a href="#" class="m-media-card">
+            {{> a-picture
+                    class="m-media-card__media"
+                    overlay="true"
+                    url="assets/media/images/home/paris-city.jpg"
+            }}
+            <div class="m-media-card__content">
+                <h3 class="a-typo-bold u-mb-4">
+                    Paris
+                </h3>
+                <span class="a-typo-einstein">
+                    93€ / precio medio por noche
+                </span>
+            </div>
+        </a>
+        <a href="#" class="m-media-card">
+            {{> a-picture
+                    class="m-media-card__media"
+                    overlay="true"
+                    url="assets/media/images/home/londres-city.jpg"
+            }}
+            <div class="m-media-card__content">
+                <h3 class="a-typo-bold u-mb-4">
+                    Londres
+                </h3>
+                <span class="a-typo-einstein">
+                    112€ / precio medio por noche
+                </span>
+            </div>
+        </a>
+        <a href="#" class="m-media-card">
+            {{> a-picture
+                    class="m-media-card__media"
+                    overlay="true"
+                    url="assets/media/images/home/nueva-york-city.jpg"
+            }}
+            <div class="m-media-card__content">
+                <h3 class="a-typo-bold u-mb-4">
+                    Nueva York
+                </h3>
+                <span class="a-typo-einstein">
+                    73€ / precio medio por noche
+                </span>
+            </div>
+        </a>
+    </div>
+
+</section>
+
+
+<!-- Seccion Alojamientos -->
+
+<section class="l l--fit u-mb-40">
+    <div class="m-heading">
+        <h3 class="a-typo-edison a-typo-bold">
+            Alojamientos
+        </h3>
+    </div>
+    {{> o-lodging-list}}
+</section>
+
+<section class="l l--fit u-mb-40">
+    <div class="m-heading">
+        <h3 class="a-typo-edison a-typo-bold">
+            Noticias sobre nosotros
+        </h3>
+    </div>
+</section>

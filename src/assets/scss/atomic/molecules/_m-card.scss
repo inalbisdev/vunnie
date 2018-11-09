@@ -1,0 +1,99 @@
+
+.m-card{
+  position: relative;
+  &__body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__media{
+    border-radius: $m-card__media-border-radius;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16px;
+    //width: 225px;
+    @include aspectRatio(225,175);
+    img{
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+  }
+
+  &__avobe-line{
+    display: block;
+  }
+  &__detail{
+    display: block;
+    color: #50585D;
+    font-size: 12px;
+  }
+
+  &__content{}
+  &__actions{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 25px 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__fav{
+    display: inline-flex;
+    &:hover{
+
+    }
+  }
+  &__title{
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+  &__subtitle{}
+  &__text{
+    margin: 16px 0;
+  }
+  &__button{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    margin-left: -16px;
+    .a-button{
+      margin-left: 16px;
+    }
+  }
+
+  &--in-box{
+    padding: 90px 50px;
+    background: #f6f6f6;
+    margin: 90px 0;
+    .m-card__body{
+      max-width: 1000px;
+    }
+    @media (max-width: 480px){
+      padding: 45px 25px;
+      margin: 45px 0;
+    }
+  }
+
+  &--full{
+    max-width: 1000px;
+    &:not(:first-child){
+      margin-top: 60px;
+    }
+  }
+
+
+  &--group{
+    padding-right: 32px;
+    @media (max-width: 899px){
+      padding-right: 0;
+      padding-bottom: 32px;
+    }
+  }
+
+
+
+}

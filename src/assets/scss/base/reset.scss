@@ -1,0 +1,53 @@
+@import "../vars/glob";
+@import "../mixins/glob";
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: $base-font-family;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: $color-black;
+  @media (max-width: 480px){
+    font-size: 16px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  font-weight: 400;
+}
+
+picture{
+  display: block;
+}
+
+img{
+  max-width: 100%;
+}
+
+p{
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+select{
+  background-color: $color-white;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}

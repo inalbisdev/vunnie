@@ -1,0 +1,197 @@
+/*********************************************************
+
+                  TABLE OF CONTENTS
+
+1. Global Settings
+  1.1 Base Font Configuration
+  1.2 Media Queries
+  1.3 Gel Grid Configuration
+  1.4 Color Variations
+  1.5 Gradient Variations
+  1.6 Vector Icons Mapping and Sizes
+
+2. Atoms
+  2.1 Buttons
+  2.2 Fav
+  2.3 Link
+  2.4 Picture
+  2.5 Tag
+
+
+3. Molecules
+  3.1 Card
+  3.2. Headings
+
+4. Organisms
+  4.1 Modal
+  4.2 Newsletter
+
+5. Layouts
+  5.1 Base Layout Configuration
+
+
+
+
+*********************************************************/
+
+/*1 Global Settings*/
+
+$font-regular: "Helvetica Regular";
+$font-thin: "Helvetica Thin",sans-serif;
+$font-light: "Helvetica Light",sans-serif;
+$font-medium: "Helvetica Medium",sans-serif;
+$font-bold: "Helvetica Bold",sans-serif;
+
+/*1.1 Base Font Configuration*/
+$base-font-fallback: Sans-serif, Helvetica, sans-serif !default;
+$base-font-custom : $font-regular !default;
+$base-font-family: $base-font-custom,$base-font-fallback;
+$base-font-size: 16px !default;
+$base-line-height: 19px !default;
+$base-font-color: #1e272e;
+
+
+
+
+/*1.2 Media Queries*/
+$screen-xs-max: 479px;
+$screen-s-min: 480px;
+$screen-s-max: 767px;
+$screen-m-min: 768px;
+$screen-m-max: 1023px;
+$screen-l-min: 1024px;
+$screen-l-max: 1199px;
+$screen-xl-min: 1200px;
+
+                        /*xs,  s,     m,     l,     xl,     xxl*/
+$gel-breakpoint-sizes: (240px, 360px, 480px, 768px, 1024px, 1280px) !default;
+
+
+/*1.3 Gel Grid Configuration*/
+$gel-grid-enable--markup-output: true !default;
+$gel-spacing-unit: 16px !default;
+
+/*1.4 Color Variations*/
+$color-primary: #7313FE;
+$color-primary-dark: darken($color-primary,10%);
+$color-secondary: #FF4343;
+$color-secondary-dark: darken($color-secondary,10%);
+$color-secondary-light: lighten($color-secondary,10%);
+$color-black: #000 !default;
+$color-grey: #f2f4f7 !default;
+
+
+
+$vunnie-gradient: linear-gradient(225deg, #4800B0 0%, #9013FE 100%);
+
+$gradient-klarenz: linear-gradient(to right, #e63020 0%,#e5007e 100%);
+
+$gradient-loading: linear-gradient(135deg, $color-primary 0%,$color-primary-dark 25%, $color-secondary 50%,$color-secondary-light 75%,$color-secondary-dark 100%) !default;
+
+
+
+$color-white: #fff !default;
+$brand-colors: (
+        "primary": $color-primary,
+        "secondary": $color-secondary,
+        "black": $color-black,
+        "white": $color-white,
+) !default;
+
+/*1.5 Gradient Variations*/
+$gradient-variations: (
+        "klarenz" : $gradient-klarenz,
+        "loading" : $gradient-loading
+) !default;
+
+/*1.6 Vector Icons Mapping and Sizes*/
+$icons-font-family: "Way Icons" !default;
+$icons-file-name: "way" !default;
+$icons-base-font-size: 16px !default;
+$icons: (
+        "arrow-left": "\ea01",
+        "arrow-right": "\ea02",
+        "favorite-filled": "\ea03",
+        "favorite": "\ea04",
+        "review": "\ea05",
+        "share": "\ea06",
+) !default;
+$icons-sizes: (
+        "x1" : $icons-base-font-size * 1.25,
+        "x2" : $icons-base-font-size * 1.5,
+        "x3" : $icons-base-font-size * 1.75,
+        "x4" : $icons-base-font-size * 2,
+        "x5" : $icons-base-font-size * 2.25,
+        "x6" : $icons-base-font-size * 2.5,
+        "x7" : $icons-base-font-size * 2.75,
+        "x8" : $icons-base-font-size * 3
+) !default;
+
+
+
+/*2 Atoms*/
+
+/*2.1 Buttons*/
+$a-button-border-radius: 4px !default;
+$a-button-box-shadow: 0 1px 3px 0 rgba(0,0,0,.5) !default;
+$a-button-border: none !default;
+$a-button-padding: 15px !default;
+$a-button-font-size: 16px !default;
+$a-button-line-height: 19px !default;
+
+/*Button Effect*/
+$a-animation-ripple: true !default;
+
+/*Button Variations*/
+$a-button-paris-background: $color-primary !default;
+$a-button-paris-color: $color-white !default;
+
+$a-button-berlin-background: $color-secondary !default;
+$a-button-berlin-color: $color-white !default;
+
+$a-button-moskva-background: $color-black !default;
+$a-button-moskva-color: $color-white !default;
+
+$a-button-oslo-background: $color-white !default;
+$a-button-oslo-color: $color-black !default;
+
+
+
+/*2.2 Fav*/
+
+
+/*2.3 Link*/
+$a-link-color: $color-black !default;;
+
+/*2.4 Picture*/
+$a-picture-border-radius: 2px !default;
+
+/*2.5 Tags*/
+$a-tag-background: $color-white !default;
+$a-tag-border-radius: 12px !default;
+
+
+/*3.Molecules*/
+
+/*3.1 Card*/
+$m-card__media-border-radius : $a-picture-border-radius !default;
+$m-card__media-box-shadow : 0 0 5px 1px rgba(183, 183, 183, 0.75) !default;
+
+/*3.2 Headings*/
+$m-heading-padding-bottom: 35px !default;
+
+/*4.Organisms*/
+
+/*4.1 Modal*/
+$o-modal-z-index: 900;
+
+/*4.2 Newsletter*/
+$o-newsletter-box-shadow: $m-card__media-box-shadow !default;
+$o-newsletter-border-radius: $m-card__media-border-radius !default;
+
+/*5 Layouts*/
+
+/*5.1 Base Layout Configuration*/
+$l__container-max-width: 1132px !default;
+$l__container-left-padding: 50px !default;
+$l__container-right-padding: 50px !default;

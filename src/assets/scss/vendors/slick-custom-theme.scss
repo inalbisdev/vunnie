@@ -1,0 +1,135 @@
+.slick{
+  /*Graceful load for slider*/
+  &-slider{
+    opacity: 0;
+    transition: .6s opacity;
+    height: 100%;
+    &:not(.slick-initialized){
+      display: flex;
+    }
+    &.slick-initialized{
+      opacity: 1;
+    }
+  }
+  &-arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    top: calc(50% - 100px);
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    &--left{
+      left: -20px;
+      transform: rotate(135deg);
+    }
+    &--right{
+      right: -20px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-progress{
+    &-dots{
+      .slick-dots{
+        display: flex;
+        align-items: center;
+        li{
+          height: 4px;
+          background-color: rgba(255,255,255,.4);
+          border-radius: 4px;
+          width: 100%;
+          position: relative;
+          margin: 0 10px;
+          button{
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-indent: -9999px;
+          }
+          &:not(.slick-active){
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+        .dots-progress{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+  &-absolute-dots{
+    .slick-dots{
+      position: absolute;
+      bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      left: 0;
+      z-index: 1;
+      li{
+        margin: 0 20px 0 0;
+        cursor: pointer;
+        &.slick-active{
+          button{
+            background: linear-gradient(45deg, #42F4A8 0%, #32CAC4 100%);
+          }
+        }
+        button{
+          cursor: pointer;
+          outline: none;
+          border: none;
+          background: #F2F4F7;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          text-indent: -9999px;
+
+        }
+        &:last-child{
+          margin: 0;
+        }
+      }
+    }
+  }
+  &-right-stage-padding{
+    margin-right: -5vw;
+    .slick-slide{
+      margin: 0 32px 0 0;
+    }
+    .slick-list{
+      padding-left: 0 !important;
+    }
+  }
+
+  /*Arrow Refactor*/
+  &-arrow{
+    cursor: pointer;
+  }
+
+  &-arrows-bottom{
+    .slick-arrow{
+      position: absolute;
+      bottom: -64px;
+      right: calc(5vw - 10px);//Lo hacemos al añadir el ancho
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      &--left{
+        right: calc(5vw + 50px)
+      }
+      &--right{}
+    }
+  }
+
+}

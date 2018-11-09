@@ -1,0 +1,8 @@
+@import "../vars/glob";
+
+@mixin generateTypo($font-size,$font-line-height,$font-weight: 400,$font-family: $base-font-family) {
+  line-height: $font-line-height;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: $base-font-family;
+}

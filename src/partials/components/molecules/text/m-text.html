@@ -1,0 +1,10 @@
+<div class="m-text">
+    {{#each heading}}
+        <{{this.tag}} class="{{this.class}}">{{this.text}}</{{this.tag}}>
+    {{/each}}
+    {{#each paragraph}}
+    <p class="{{this.class}}">
+        {{this.text}}
+    </p>
+    {{/each}}
+</div>

@@ -1,0 +1,10 @@
+.o-lodging-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -13px;
+  .m-card{
+    width: 25%;
+    padding-left: 13px;
+    margin-bottom: 20px;
+  }
+}

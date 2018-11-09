@@ -1,0 +1,49 @@
+@import "../../vars/glob";
+@import "../../mixins/glob";
+
+
+.u-aspect {
+  @include aspectRatio(1,1) ;
+  &--49\/30{
+    @include aspectRatio(456,292,true);
+  }
+  &--16\/9 {
+    @include aspectRatio(16,9,true);
+  }
+  &--9\/16 {
+    @include aspectRatio(9,16,true);
+  }
+  &--3\/4 {
+    @include aspectRatio(3,4,true);
+  }
+  &--230 {
+    &:before {
+      padding-top: 230px;
+    }
+  }
+  &--300{
+    &:before{
+      padding-top: 300px;
+    }
+  }
+  &--350 {
+    &:before{
+      padding-top: 350px;
+    }
+  }
+  &--420{
+    &:before{
+      padding-top: 420px;
+    }
+  }
+  &--450{
+    &:before{
+      padding-top: 450px;
+    }
+  }
+  &--500{
+    &:before{
+      padding-top: 500px;
+    }
+  }
+}

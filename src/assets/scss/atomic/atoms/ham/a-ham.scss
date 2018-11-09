@@ -1,0 +1,45 @@
+@import "../../../vars/default/default";
+
+.a-ham{
+  @media (min-width: $screen-m-max + 1){
+    display: none;
+  }
+  width: 20px;
+  position: relative;
+  transition: transform .6s;
+  cursor: pointer;
+  &__item{
+    display: block;
+    position: relative;
+    height: 2px;
+    width: 100%;
+    background: $color-black;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: transform .25s;
+    margin-bottom: 5px;
+    transform-origin: left center;
+    will-change: transform, opacity;
+    pointer-events: none;
+    &--t{
+      .menu-is-open &{
+        transform: rotate(45deg);
+        left: 0;
+      }
+    }
+    &--m{
+      .menu-is-open &{
+        width: 0;
+        opacity: 0;
+      }
+    }
+    &--b{
+      margin-bottom: 0;
+      .menu-is-open &{
+        transform: rotate(-45deg);
+        left: 0;
+      }
+    }
+  }
+}

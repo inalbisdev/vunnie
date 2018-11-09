@@ -1,0 +1,23 @@
+.a-scroll-top{
+  position: fixed;
+  opacity: 0;
+  will-change: opacity;
+  bottom: 20px;
+  right: 20px;
+  pointer-events: none;
+  transition: .6s opacity;
+  cursor: n-resize;
+  font-family: $font-bold;
+
+  &:hover{
+
+  }
+  &.is-active{
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+
+
+

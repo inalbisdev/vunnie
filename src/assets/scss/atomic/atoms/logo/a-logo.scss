@@ -1,0 +1,30 @@
+.a-logo{
+  &__path{
+    &-1{
+      animation: animateLogoPoint1 1s linear infinite forwards;
+    }
+    &-2{
+      animation: animateLogoPoint2 1s linear infinite forwards;
+    }
+  }
+  .st0{
+    background: $gradient-loading;
+  }
+}
+
+
+.l0{fill:url(#SVGID_1_);}
+.l1{fill:#FFFFFF;}
+
+.st0 {
+  fill: url(#SVGID_1_);
+}
+
+.st1 {
+  font-family: 'Helvetica-Light';
+  letter-spacing: 5px;
+}
+
+.st2 {
+  font-size: 30px;
+}

@@ -1,0 +1,48 @@
+@import "../../../vars/glob";
+@import "../../../mixins/glob";
+
+
+
+
+
+/*Modifiers based on cientific names*/
+
+.a-typo{
+
+  &-regular{
+    font-family: $font-regular;
+  }
+  &-thin{
+    font-family: $font-thin;
+  }
+
+  &-light{
+    font-family: $font-light;
+  }
+
+  &-medium{
+    font-family: $font-medium;
+  }
+
+  &-bold{
+    font-family: $font-bold;
+    font-weight: 400;
+  }
+
+  &-tesla{
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &-hawking{
+    font-size: 24px;
+    line-height: 28px;
+  }
+  &-edison{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &-einstein{
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

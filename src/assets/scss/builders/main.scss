@@ -1,0 +1,72 @@
+/*********************************************************
+
+                  TABLE OF CONTENTS
+
+1. Vars and Mixins
+2. Global Reset
+3. Vendors and themes
+4. Atoms
+5. Molecules
+6. Organisms
+7. Layouts
+8. Utils
+
+*********************************************************/
+
+@font-face {
+  font-family: 'Helvetica Thin';
+  font-display: fallback;
+  src: local('Helvetica Thin'),
+  url(../fonts/Helvetica_Thin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Helvetica Regular';
+  font-display: fallback;
+  src: local('Helvetica Regular'),
+  url(../fonts/Helvetica_Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Helvetica Medium';
+  font-display: fallback;
+  src: local('Helvetica Medium'),
+  url(../fonts/Helvetica_Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  font-display: fallback;
+  src: local('Helvetica Bold'),
+  url(../fonts/Helvetica_Bold.woff2) format('woff2');
+}
+
+
+/*1 Vars and Mixins*/
+@import "../vars/glob";
+@import "../mixins/glob";
+
+/*2 Global Reset*/
+@import "../vendors/normalize";
+@import "../base/reset";
+
+/*3 Vendors and themes*/
+@import "../../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../vendors/slick-custom-theme";
+/*
+@import "../../../../node_modules/slick-carousel/slick/slick.scss";
+
+*/
+
+/*4 Atoms*/
+@import "../atomic/atoms/glob";
+
+/*5 Molecules*/
+@import "../atomic/molecules/glob";
+
+/*6 Organisms*/
+@import "../atomic/organisms/glob";
+
+/*7 Layouts*/
+@import "../atomic/layouts/glob";
+
+/*8 Utils*/
+@import "../utils/glob";

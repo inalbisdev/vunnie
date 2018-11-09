@@ -1,0 +1,164 @@
+{
+  "lodging": [
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Apartamento · Barcelona",
+          "title": "Apartamento en el centro de la ciudad de Barcelona",
+          "conditions": "59€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-1.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Apartamento · Madrid",
+          "title": "Apartamento en el centro de la ciudad de Madrid",
+          "conditions": "159€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-2.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Casa · Paris",
+          "title": "Apartamento en el centro de la ciudad de Paris",
+          "conditions": "42€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-3.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Casa · Moldavia",
+          "title": "Apartamento en el centro de la ciudad de Moldavia",
+          "conditions": "82€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-4.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Casa · Mallorca",
+          "title": "Casa Rural en el centro de Mallorca",
+          "conditions": "172€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-4.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Casa · Mallorca",
+          "title": "Casa Rural en el centro de Mallorca",
+          "conditions": "172€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-3.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Casa · Mallorca",
+          "title": "Casa Rural en el centro de Mallorca",
+          "conditions": "172€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-2.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "m-card",
+      "attr": [
+        {
+          "elemclass": "",
+          "place": "Casa · Mallorca",
+          "title": "Casa Rural en el centro de Mallorca",
+          "conditions": "172€ por noche · Cancelación Estricta",
+          "media": [
+            {
+              "overlay": true,
+              "class": "m-card__media",
+              "alt": "Alt",
+              "title": "Title",
+              "url": "assets/media/images/lodging/lodging-1.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

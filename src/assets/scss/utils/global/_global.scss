@@ -1,0 +1,98 @@
+@import "../../vars/glob";
+
+/*********************************************************
+
+                  TABLE OF CONTENTS
+
+1. Text Manipulation
+
+2. Colors generators
+
+3. Media Manipulation
+
+4. Visibility Manipulation
+
+
+
+*********************************************************/
+
+/*1 Text Manipulation*/
+
+.u-light{
+  font-weight: 300;
+}
+.u-regular{
+  font-weight: 400;
+}
+.u-semibold{
+  font-weight: 600;
+}
+.u-bold{
+  font-weight: 700;
+}
+.u-uppercase{
+  text-transform: uppercase;
+}
+
+.u-underline{
+  text-decoration: underline;
+}
+.u-no-underline{
+  text-decoration: none;
+}
+
+.u-align{
+  &-center{
+    text-align: center;
+  }
+}
+
+/*2. Colors generators*/
+
+.a-bg{
+  @each $name, $value in $brand-colors{
+    &-#{$name}{
+      background: $value;
+    }
+  }
+}
+.a-color{
+  @each $name, $value in $brand-colors{
+    &-#{$name}{
+      color: $value;
+    }
+  }
+}
+.a-gradient{
+  @each $name, $value in $gradient-variations{
+    &-#{$name}{
+      background: $value;
+    }
+  }
+}
+
+
+/*3. Media Manipulation*/
+
+.u-media-cover{
+  object-fit: cover;
+  width: 100%;
+}
+
+/*4. Media Manipulation*/
+.u-overflow-hidden{
+  overflow: hidden;
+}
+.u-hidden{
+  display: none;
+}
+
+
+
+
+
+/*5. Width Manipulation*/
+.u-fit-width{
+  max-width: 1000px;
+}
+

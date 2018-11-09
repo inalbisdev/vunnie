@@ -1,0 +1,145 @@
+@import "../../vars/glob";
+
+$measures: (100,96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16,12, 8, 4, 0); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+
+.u-mh-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@each $space in $measures {
+
+  // Margin
+
+  .u-m-#{$space}-l {
+    @media (min-width: $screen-xl-min) {
+      margin: #{$space}px;
+    }
+  }
+
+  .u-m-#{$space}-m {
+    @media (max-width: $screen-xl-min - 1) {
+      margin: #{$space}px;
+    }
+  }
+
+  .u-m-#{$space}-s {
+    @media (max-width: $screen-l-min - 1) {
+      margin: #{$space}px;
+    }
+  }
+
+  .u-m-#{$space}-xs {
+    @media (max-width: $screen-m-min - 1) {
+      margin: #{$space}px;
+    }
+  }
+
+  .u-m-#{$space} {
+    margin: #{$space}px;
+  }
+
+  // Margin TOP and BOTTOM
+
+  .u-mv-#{$space}-l {
+    @media (min-width: $screen-xl-min) {
+      margin: #{$space}px 0;
+    }
+  }
+
+  .u-mv-#{$space}-m {
+    @media (max-width: $screen-xl-min - 1) {
+      margin: #{$space}px 0;
+    }
+  }
+
+  .u-mv-#{$space}-s {
+    @media (max-width: $screen-l-min - 1) {
+      margin: #{$space}px 0;
+    }
+  }
+
+  .u-mv-#{$space}-xs {
+    @media (max-width: $screen-m-min - 1) {
+      margin: #{$space}px 0;
+    }
+  }
+
+  .u-mv-#{$space} {
+    margin-top: #{$space}px;
+    margin-bottom: #{$space}px;
+  }
+
+  // Margin LEFT and RIGHT
+
+  .u-mh-#{$space}-l {
+    @media (min-width: $screen-xl-min) {
+      margin: 0 #{$space}px;
+    }
+  }
+
+  .u-mh-#{$space}-m {
+    @media (max-width: $screen-xl-min - 1) {
+      margin: 0 #{$space}px;
+    }
+  }
+
+  .u-mh-#{$space}-s {
+    @media (max-width: $screen-l-min - 1) {
+      margin: 0 #{$space}px;
+    }
+  }
+
+  .u-mh-#{$space}-xs {
+    @media (max-width: $screen-m-min - 1) {
+      margin: 0 #{$space}px;
+    }
+  }
+
+  .u-mh-#{$space} {
+    margin: 0 #{$space}px;
+  }
+
+
+
+  @each $side in $sides {
+
+    .u-m#{str-slice($side, 0, 1)}-#{$space}-l {
+      @media (min-width: $screen-xl-min) {
+        margin-#{$side}: #{$space}px;
+      }
+    }
+
+    .u-m#{str-slice($side, 0, 1)}-#{$space}-m {
+      @media (max-width: $screen-xl-min - 1) {
+        margin-#{$side}: #{$space}px;
+      }
+    }
+
+    .u-m#{str-slice($side, 0, 1)}-#{$space}-s {
+      @media (max-width: $screen-l-min - 1) {
+        margin-#{$side}: #{$space}px;
+      }
+    }
+
+
+    .u-m#{str-slice($side, 0, 1)}-#{$space}-xs {
+      @media (min-width: $screen-m-min ) {
+        margin-#{$side}: #{$space}px;
+      }
+    }
+
+    .u-m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+
+
+
+
+
+
+  }
+}

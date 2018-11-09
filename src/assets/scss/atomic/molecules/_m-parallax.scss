@@ -1,0 +1,25 @@
+.m-parallax{
+  position: relative;
+  &__media{
+    height: 200px;
+    img{
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+      width: 100%;
+    }
+  }
+  &__title{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    font-size: 50px;
+    line-height: 60px;
+    font-family: $font-bold;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../../vars/glob";
+
+/*
+@font-face {
+  font-family: $icons-font-family;
+  font-style: normal;
+  font-display: swap;
+  src: local($icons-font-family),
+  url("../fonts/#{$icons-file-name}.woff2") format('woff2'),
+  url("../fonts/#{$icons-file-name}.woff") format('woff')
+}
+*/
+
+.a-icon {
+  font-family: $icons-font-family;
+
+  @each $name, $value in $icons {
+    &-#{$name} {
+      &::before {
+        content: "#{$value}";
+      }
+    }
+  }
+  @each $name, $value in $icons-sizes {
+    &--#{$name} {
+      font-size: #{$value};
+    }
+  }
+
+  &--rounded{
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

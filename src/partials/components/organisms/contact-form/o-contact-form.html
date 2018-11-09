@@ -1,0 +1,52 @@
+<div class="o-contact-form">
+    <div class="o-contact-form__heading">
+        <div class="o-contact-form__heading-title">
+            Solicitud de información
+        </div>
+        <div class="o-contact-form__heading-text">
+            Te enviaremos la información completa del programa <span>ThePowerMBA</span> a tu correo electrónico y el
+            primer <strong>CURSO GRATIS</strong>.
+        </div>
+    </div>
+
+
+    <!-- Mensaje de confirmación de email, al aparecer tiene que ocultar el o-contact-form__form -->
+    <div class="m-message" style="display: none;">
+        <div class="m-message__title">
+            ¡Gracias por enviar tu solicitud!
+        </div>
+        <div class="m-message__text">
+            Gracias por enviar tu solicitud. Nos pondremos en contacto contigo lo antes posible.
+        </div>
+    </div>
+
+    <div class="o-contact-form__form">
+        <form method="post" name="contact-form">
+
+            <div class="m-field">
+                <input class="a-input is-required" type="text" name="name" id="name"
+                       placeholder="Nombre"/>
+            </div>
+            <div class="m-field">
+                <input class="a-input is-required" type="email" name="email" id="email"
+                       placeholder="Correo Electrónico"/>
+            </div>
+            <div class="m-field">
+                <input class="a-input is-required" type="tel" name="phone" id="phone"
+                       placeholder="Teléfono"/>
+            </div>
+
+            <div class="m-field__button">
+                <button id="submitForm" type="submit" class="a-button a-button--fit a-button--berlin">
+                    Pedir información
+                </button>
+            </div>
+        </form>
+        <div class="o-contact-form__terms">
+            Al registrarte estás de acuerdo con las <a href="https://www.thepowermba.com/legal/" target="_blank">Condiciones del servicio</a>.
+        </div>
+    </div>
+</div>
+
+
+

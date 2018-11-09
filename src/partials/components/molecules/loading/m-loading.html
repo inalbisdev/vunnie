@@ -1,0 +1,19 @@
+<div class="m-loading" id="m-loading">
+    <div class="m-loading__logo">
+        {{> a-logo-white}}
+    </div>
+</div>
+<script>
+    (function () {
+        var element = document.getElementById('m-loading');
+        if(sessionStorage.loading){
+            if (element) {
+                element.style.display = "none";
+            }
+        }else{
+            if (element) {
+                element.style.display = "flex";
+            }
+        }
+    })();
+</script>

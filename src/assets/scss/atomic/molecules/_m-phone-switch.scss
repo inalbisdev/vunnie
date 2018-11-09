@@ -1,0 +1,16 @@
+.m-phone-switch{
+  &__item{
+    &--desktop{
+      .is-device &{
+        display: none;
+      }
+    }
+    &--mobile{
+      display: none;
+      .is-device &{
+        display: block;
+      }
+    }
+  }
+
+}
