@@ -1,0 +1,38 @@
+---
+layout: default
+title: Vunnie | Apartment List
+page: Home
+header: inv
+---
+<div class="o-fixed-searcher">
+    {{> o-searcher}}
+</div>
+
+
+<section class="l l--fit u-mv-40">
+    <div class="m-parallax">
+        <picture class="m-parallax__media">
+            <img class="lazyload" data-src="{{root}}assets/media/images/home/barcelona-parallax.jpg"
+                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        </picture>
+        <h3 class="m-parallax__title">
+            Barcelona
+        </h3>
+    </div>
+</section>
+
+<section class="l l--fit u-mb-40">
+    <div class="m-heading">
+        <h3 class="a-typo-edison a-typo-bold">
+            Alojamientos en <span class="a-typo-bold a-color-primary">Barcelona</span>
+        </h3>
+    </div>
+    {{#repeat 2}}
+        {{> o-lodging-list}}
+    {{/repeat}}
+
+    {{> m-pagination class="u-mv-40"}}
+
+
+</section>
+

@@ -1,0 +1,64 @@
+.o-user-modal{
+
+
+
+  &__heading{
+    color: $color-white;
+    margin-bottom: 25px;
+  }
+  &__logo{
+    margin-bottom: 20px;
+  }
+  &__title{
+    font-size: 18px;
+    font-family: $font-bold;
+    margin-bottom: 4px;
+  }
+  &__text{
+
+  }
+
+  .a-button{
+    &--submit{
+      display: block;
+      margin: 30px auto 0;
+      width: 60%;
+    }
+  }
+
+  &__footer{
+    color: #fff;
+    text-align: center;
+    margin-top: 35px;
+    .a-separator{
+      margin: 15px 0;
+    }
+    a{
+      color: #fff;
+      transition: .4s color;
+      text-decoration: none;
+      &:hover{
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__forgotten{
+    font-size: 12px;
+    font-family: $font-bold;
+    line-height: 15px;
+  }
+  &__register{
+    font-size: 14px;
+    font-family: $font-bold;
+    line-height: 17px;
+    a{
+      color: #fff;
+      font-size: 14px;
+      font-family: $font-bold;
+      line-height: 17px;
+    }
+  }
+
+}
+

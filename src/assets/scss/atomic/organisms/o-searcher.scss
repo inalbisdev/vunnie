@@ -32,5 +32,17 @@
     color: #1e272e;
     font-size: 12px;
     font-family: $font-bold;
+    opacity: 1;
+  }
+}
+
+
+.o-fixed-searcher{
+  background-color: #F2F4F7;
+  padding: 20px 0;
+  .o-searcher{
+    max-width: $l__container-max-width - 100;
+    margin: 0 auto;
+
   }
 }

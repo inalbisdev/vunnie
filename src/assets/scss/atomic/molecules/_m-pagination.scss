@@ -1,0 +1,44 @@
+.m-pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__bullet{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D8D8D8;
+    font-size: 18px;
+    font-family: $font-bold;
+    line-height: 22px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: .3s background-color;
+    &:hover{
+      background-color: #FF4343;
+    }
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &.is-active{
+      background-color: #FF4343;
+    }
+  }
+  &__prev{
+    margin-right: 30px;
+  }
+  &__next{
+    margin-left: 5px;
+  }
+
+  &__prev,
+  &__next{
+    color: $color-secondary;
+    font-size: 12px;
+    font-family: $font-bold;
+  }
+}

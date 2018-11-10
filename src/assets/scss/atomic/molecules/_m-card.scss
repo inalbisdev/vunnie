@@ -20,6 +20,10 @@
       border-radius: 2px;
     }
   }
+  &__conditions{
+    color: #50585D;
+    display: block;
+  }
 
   &__avobe-line{
     display: block;
@@ -28,6 +32,17 @@
     display: block;
     color: #50585D;
     font-size: 12px;
+  }
+  &__hosted{
+    color: #50585D;
+    span{
+      font-family: $font-medium;
+    }
+  }
+  &__address{
+    color: #50585D;
+    font-family: $font-medium;
+    font-style: normal;
   }
 
   &__content{}
@@ -49,6 +64,10 @@
   &__title{
     margin-bottom: 4px;
     font-size: 16px;
+    a{
+      color: #121212;
+      text-decoration: none;
+    }
   }
   &__subtitle{}
   &__text{
@@ -94,6 +113,15 @@
     }
   }
 
+
+  &--detail{
+    .m-card__title{
+      font-size: 35px;
+      line-height: 42px;
+      margin-bottom: 16px;
+      margin-top: 12px;
+    }
+  }
 
 
 }

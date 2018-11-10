@@ -8,7 +8,8 @@ module.exports = (function () {
         scrollTop: require('./ui/scrollTop'),
         cookies: require('./ui/cookies'),
         validation: require('./ui/validation'),
-        slider: require('./ui/slider')
+        slider: require('./ui/slider'),
+        wizard: require('./ui/wizard')
     };
 })();
 

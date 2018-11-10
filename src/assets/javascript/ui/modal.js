@@ -9,6 +9,7 @@ module.exports = {
         open: 'is-opened',
         overflow: "modal-is-opened",
         openedModal: "",
+        $stepLinks: '[data-step]',
     },
 
     toggleSelfState: function($el,state){
@@ -22,6 +23,8 @@ module.exports = {
     closeModal: function(){
         $(this.locators.openedModal).removeClass(this.locators.open);
         this.togglePageScroll(false);
+        $(this.locators.$stepLinks).removeClass('is-active');
+
     },
 
     openModal: function($el){

@@ -23,6 +23,7 @@ const App = {
         App.ui.cookies.init();
         App.ui.validation.init();
         App.ui.slider.init();
+        App.ui.wizard.init();
 
     };
     initAll();

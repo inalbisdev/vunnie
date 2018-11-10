@@ -53,8 +53,31 @@
       font-family: $font-bold;
       line-height: 17px;
       transition: .3s color;
+      position: relative;
+      &::before,
+      &::after{
+        content: "";
+        width: 0;
+        position: absolute;
+        height: 3px;
+        background: #fff;
+        bottom: -10px;
+        transition: .3s width;
+      }
+      &::before{
+        right: 0;
+      }
+      &::after{
+        left: 0;
+      }
       &:hover{
         color: $color-secondary;
+      }
+      &.is-active{
+        &::before,
+        &::after{
+          width: 50%;
+        }
       }
     }
     &--mobile {
@@ -87,6 +110,24 @@
   .menu-is-open & {
     z-index: 10000;
   }
+
+
+  &--inv{
+    background: #F2F4F7;
+    .o-header__nav-link{
+      color: #000;
+      &.is-active{
+        &::before,
+        &::after{
+          background-color: #FF4343;
+        }
+      }
+      &:hover{
+        color: #FF4343;
+      }
+    }
+  }
+
 }
 .menu-is-open{
   overflow: hidden;

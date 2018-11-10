@@ -1,14 +1,14 @@
 @import "../../../vars/default/default";
 
 .a-input{
-  border: 1px solid #979797;
-  background-color: $color-white;
+  border: none;
+  background-color: transparent;
   width: 100%;
   height: 40px;
-  color: #333;
-  padding: 0 15px;
-  border-radius: 3px;
-  font-size: 16px;
+  font-size: 18px;
+  color: #fff;
+  padding: 0;
+  border-radius: 0;
 
 }
 
@@ -39,17 +39,17 @@ input:placeholder-shown + label {
   overflow: hidden;
   text-overflow: ellipsis;
   transform-origin: left bottom;
-  transform: translate(0, 2.125rem) scale(1.5);
+  transform: translate(0, 2.125rem);
 }
 /**
 * By default, the placeholder should be transparent. Also, it should
 * inherit the transition.
 */
 ::-webkit-input-placeholder {
-  opacity: 1;
+  opacity: 0;
   transition: inherit;
   font-size: 14px;
-  color: #9B9B9B;
+  color: #fff;
   font-weight: 700;
 }
 /**
@@ -65,7 +65,7 @@ input:focus::-webkit-input-placeholder {
 */
 input:not(:placeholder-shown) + label,
 input:focus + label {
-  transform: translate(0, 0) scale(1);
+  transform: translate(0, 0);
   cursor: pointer;
   & + .m-field__error{
     //display: none;

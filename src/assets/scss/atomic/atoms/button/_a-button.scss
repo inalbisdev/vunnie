@@ -48,6 +48,7 @@
     line-height: 17px;
     padding: 5px 20px;
   }
+  /*BLANCO*/
   &--berlin{
     background: $a-button-berlin-background;
     color: $a-button-berlin-color;
@@ -58,6 +59,7 @@
       color: $a-button-berlin-color;
     }
   }
+  /*ROJO*/
   &--moskva{
     background: $a-button-moskva-background;
     color: $a-button-moskva-color;
@@ -69,6 +71,8 @@
       border-color: $color-black;
     }
   }
+
+
   &--oslo{
     background: $a-button-oslo-background;
     color: $a-button-oslo-color;
@@ -85,8 +89,8 @@
   }
 
   &--fit{
-    display: inline-flex;
-    width: 100%;
+
+
   }
 
   &--has-icon{

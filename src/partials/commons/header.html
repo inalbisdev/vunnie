@@ -1,21 +1,26 @@
-<header class="o-header">
+<header class="o-header {{#if header}}o-header--inv {{/if}}">
     <!-- Logo -->
 
     <a href="./{{root}}" class="o-header__logo">
-        {{> a-logo}}
+        {{#if header}}
+            {{> a-logo-color}}
+            {{else}}
+            {{> a-logo}}
+        {{/if}}
+
     </a>
 
     <!--  Desktop Navigation -->
     <nav class="o-header__nav">
         <ul>
             <li class="o-header__nav-item">
-                <a target="_blank" href="https://www.thepowermba.com/faq/" class="o-header__nav-link">Ayuda</a>
+                <a target="_blank" href="#" class="o-header__nav-link">Ayuda</a>
             </li>
             <li class="o-header__nav-item">
-                <a href="{{root}}programa.html" class="o-header__nav-link">Registro</a>
+                <a href="{{root}}programa.html" data-step="1" class="o-header__nav-link js-modal" data-modal="#userModal">Registro</a>
             </li>
             <li class="o-header__nav-item">
-                <a href="{{root}}programa.html" class="o-header__nav-link js-modal" data-modal="#userModal">Iniciar sesión</a>
+                <a href="{{root}}programa.html" data-step="0" class="o-header__nav-link js-modal" data-modal="#userModal">Iniciar sesión</a>
             </li>
         </ul>
     </nav>
