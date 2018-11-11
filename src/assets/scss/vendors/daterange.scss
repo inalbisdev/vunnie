@@ -322,8 +322,15 @@
   color: #fff;
 }
 
+.drp-calendar.right {
+  display: none !important;
+}
+
 /*  Larger Screen Styling */
 @media (min-width: 564px) {
+  .drp-calendar.right {
+    display: block !important;
+  }
   .daterangepicker {
     width: auto; }
   .daterangepicker .ranges ul {
