@@ -21,12 +21,20 @@
     transform: translateY(-50%);
     left: 0;
     right: 0;
+    @media (max-width: 767px){
+      padding-left: $l-_container-left-padding / 2;
+      padding-right: $l-_container-right-padding / 2;
+    }
   }
   &__title{
     font-size: 30px;
     line-height: 36px;
     color: #fff;
     font-family: $font-bold;
+    @media (max-width: 767px){
+      font-size: 26px;
+      line-height: 32px;
+    }
   }
   &__searcher{
     margin-top: 26px;

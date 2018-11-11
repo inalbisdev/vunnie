@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Vunnie | Apartment List
-page: Home
+page: list
 header: inv
+
 ---
 <div class="o-fixed-searcher">
     {{> o-searcher}}
@@ -28,7 +29,7 @@ header: inv
         </h3>
     </div>
     {{#repeat 2}}
-        {{> o-lodging-list}}
+        {{> o-lodging-list-detail}}
     {{/repeat}}
 
     {{> m-pagination class="u-mv-40"}}

@@ -66,9 +66,9 @@
     border: 1px solid transparent;
     transition: .6s background-color;
     &:hover{
-      background: $color-white;
-      color: $color-black;
-      border-color: $color-black;
+      background: darken($a-button-moskva-background,20%);
+      color: $color-white;
+
     }
   }
 

@@ -8,12 +8,18 @@
   position: relative;
   transition: transform .6s;
   cursor: pointer;
+  .o-header--inv &{
+    .a-ham__item{
+      background: $color-primary;
+    }
+  }
+
   &__item{
     display: block;
     position: relative;
     height: 2px;
     width: 100%;
-    background: $color-black;
+    background: $color-white;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -22,6 +28,8 @@
     transform-origin: left center;
     will-change: transform, opacity;
     pointer-events: none;
+
+
     &--t{
       .menu-is-open &{
         transform: rotate(45deg);

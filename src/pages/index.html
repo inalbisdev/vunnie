@@ -16,7 +16,7 @@ page: Home
             Barcelona - Madrid - París - Londres - Nueva York - San Francisco
         </h4>
     </div>
-    <div class="m-parallax">
+    <a href="apartment-list.html" class="m-parallax">
         <picture class="m-parallax__media">
             <img class="lazyload" data-src="{{root}}assets/media/images/home/san-francisco-parallax.jpg"
                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
@@ -24,7 +24,7 @@ page: Home
         <h3 class="m-parallax__title">
             Discover San Francisco
         </h3>
-    </div>
+    </a>
 </section>
 
 
@@ -36,85 +36,118 @@ page: Home
         </h3>
     </div>
 
-    <div class="o-cities">
-        <a href="#" class="m-media-card">
+    <div class="o-cities slick-absolute-dots js-slick" data-slick='{"slidesToShow": 5,"dots": true,"arrows": false,"responsive": [{"breakpoint":480,"settings":{"slidesToShow": 1}},{"breakpoint":768,"settings":{"slidesToShow": 3}},{"breakpoint":992,"settings":{"slidesToShow": 4}}]}'>
+        <div>
+            <a href="apartment-list.html" class="m-media-card">
 
-            {{> a-picture
-                    class="m-media-card__media"
-                    overlay="true"
-                    url="assets/media/images/home/barcelona-city.jpg"
-            }}
+                {{> a-picture
+                        class="m-media-card__media"
+                        overlay="true"
+                        url="assets/media/images/home/barcelona-city.jpg"
+                }}
 
-            <div class="m-media-card__content">
-                <h3 class="a-typo-bold u-mb-4">
-                    Barcelona
-                </h3>
-                <span class="a-typo-einstein">
-                    85€ / precio medio por noche
+                <div class="m-media-card__content">
+                    <h3 class="a-typo-bold u-mb-4">
+                        Barcelona
+                    </h3>
+                    <span class="a-typo-einstein">
+                    85€ / precio medio<br> por noche
                 </span>
-            </div>
-        </a>
-        <a href="#" class="m-media-card">
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="apartment-list.html" class="m-media-card">
 
-            {{> a-picture
-                    class="m-media-card__media"
-                    overlay="true"
-                    url="assets/media/images/home/madrid-city.jpg"
-            }}
-            <div class="m-media-card__content">
-                <h3 class="a-typo-bold u-mb-4">
-                    Madrid
-                </h3>
-                <span class="a-typo-einstein">
-                    64€ / precio medio por noche
+                {{> a-picture
+                        class="m-media-card__media"
+                        overlay="true"
+                        url="assets/media/images/home/madrid-city.jpg"
+                }}
+                <div class="m-media-card__content">
+                    <h3 class="a-typo-bold u-mb-4">
+                        Madrid
+                    </h3>
+                    <span class="a-typo-einstein a-typo-medium">
+                    64€ / precio medio<br> por noche
                 </span>
-            </div>
-        </a>
-        <a href="#" class="m-media-card">
-            {{> a-picture
-                    class="m-media-card__media"
-                    overlay="true"
-                    url="assets/media/images/home/paris-city.jpg"
-            }}
-            <div class="m-media-card__content">
-                <h3 class="a-typo-bold u-mb-4">
-                    Paris
-                </h3>
-                <span class="a-typo-einstein">
-                    93€ / precio medio por noche
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="apartment-list.html" class="m-media-card">
+                {{> a-picture
+                        class="m-media-card__media"
+                        overlay="true"
+                        url="assets/media/images/home/paris-city.jpg"
+                }}
+                <div class="m-media-card__content">
+                    <h3 class="a-typo-bold u-mb-4">
+                        Paris
+                    </h3>
+                    <span class="a-typo-einstein  a-typo-medium">
+                    93€ / precio medio<br> por noche
                 </span>
-            </div>
-        </a>
-        <a href="#" class="m-media-card">
-            {{> a-picture
-                    class="m-media-card__media"
-                    overlay="true"
-                    url="assets/media/images/home/londres-city.jpg"
-            }}
-            <div class="m-media-card__content">
-                <h3 class="a-typo-bold u-mb-4">
-                    Londres
-                </h3>
-                <span class="a-typo-einstein">
-                    112€ / precio medio por noche
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="apartment-list.html" class="m-media-card">
+                {{> a-picture
+                        class="m-media-card__media"
+                        overlay="true"
+                        url="assets/media/images/home/londres-city.jpg"
+                }}
+                <div class="m-media-card__content">
+                    <h3 class="a-typo-bold u-mb-4">
+                        Londres
+                    </h3>
+                    <span class="a-typo-einstein  a-typo-medium">
+                    112€ / precio medio<br> por noche
                 </span>
-            </div>
-        </a>
-        <a href="#" class="m-media-card">
-            {{> a-picture
-                    class="m-media-card__media"
-                    overlay="true"
-                    url="assets/media/images/home/nueva-york-city.jpg"
-            }}
-            <div class="m-media-card__content">
-                <h3 class="a-typo-bold u-mb-4">
-                    Nueva York
-                </h3>
-                <span class="a-typo-einstein">
-                    73€ / precio medio por noche
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="apartment-list.html" class="m-media-card">
+                {{> a-picture
+                        class="m-media-card__media"
+                        overlay="true"
+                        url="assets/media/images/home/nueva-york-city.jpg"
+                }}
+                <div class="m-media-card__content">
+                    <h3 class="a-typo-bold u-mb-4">
+                        Nueva York
+                    </h3>
+                    <span class="a-typo-einstein  a-typo-medium">
+                    73€ / precio medio<br> por noche
                 </span>
-            </div>
-        </a>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="apartment-list.html" class="m-media-card">
+                {{> a-picture
+                        class="m-media-card__media"
+                        overlay="true"
+                        url="assets/media/images/home/nueva-york-city.jpg"
+                }}
+                <div class="m-media-card__content">
+                    <h3 class="a-typo-bold u-mb-4">
+                        Nueva York
+                    </h3>
+                    <span class="a-typo-einstein  a-typo-medium">
+                    73€ / precio medio<br> por noche
+                </span>
+                </div>
+            </a>
+        </div>
+
+
+
+
+
+
     </div>
 
 </section>

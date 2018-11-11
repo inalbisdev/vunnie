@@ -36,6 +36,48 @@
     }
   }
 
+  &-absolute-dots{
+    .slick-dots{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      flex-direction: row;
+      bottom : -30px;
+      left: 0;
+      right: 0;
+      @media (max-width: 480px){
+
+      }
+      li{
+        margin-right: 4px;
+        cursor: pointer;
+        &:last-child{
+          margin-right: 0;
+        }
+        &.slick-active{
+          button{
+            background: $color-primary;
+          }
+        }
+        button{
+          transition: .4s transform;
+          cursor: pointer;
+          outline: none;
+          border: 1px solid $color-primary;
+          background: #fff;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          text-indent: -9999px;
+          padding: 0;
+
+        }
+      }
+    }
+  }
+
   &-center-arrows{
     .slick-arrow{
       &--right{}

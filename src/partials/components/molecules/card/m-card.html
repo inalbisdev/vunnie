@@ -1,7 +1,8 @@
-
 <article class="m-card">
     {{#each this.attr.[0].media}}
+        <a class="m-card__media-url" href="{{../url}}">
         {{> a-picture this}}
+        </a>
     {{/each}}
     <div class="m-card__content">
         {{#if this.attr.[0].place}}
@@ -11,7 +12,7 @@
         {{/if}}
         {{#if this.attr.[0].title}}
             <h3 class="m-card__title a-typo-bold">
-                <a href="apartment-list.html">
+                <a href="{{url}}">
                     {{this.attr.[0].title}}
                 </a>
             </h3>

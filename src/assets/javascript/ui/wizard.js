@@ -2,8 +2,7 @@ module.exports = {
 
     locators: {
         $slider: '#userModalSlider',
-        $stepLinks: '[data-step]',
-        $forgotLink: ".o-user-modal__forgotten"
+        $stepLinks: '[data-step]'
     },
 
 

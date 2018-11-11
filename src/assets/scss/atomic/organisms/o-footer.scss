@@ -10,7 +10,7 @@
     flex-wrap: wrap;
   }
   @media (max-width: 767px){
-    padding: 30px 15px 0;
+    padding: 30px 15px;
   }
   &__logo{
     display: flex;
@@ -97,13 +97,16 @@
     padding: 40px 0 0;
     .o-footer__links{
       justify-content: flex-end;
+      width: 100%;
+      @media (min-width: 1201px){
+        padding-left: 212px;
+      }
+
       .o-footer__col--work{
-        width: auto;
-        margin-right: 80px;
+
       }
       .o-footer__col--social{
-        width: auto;
-        margin-right: 140px;
+
       }
     }
   }

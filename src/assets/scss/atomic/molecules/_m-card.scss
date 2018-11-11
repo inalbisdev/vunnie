@@ -19,6 +19,9 @@
       object-fit: cover;
       border-radius: 2px;
     }
+    &-url{
+      display: block;
+    }
   }
   &__conditions{
     color: #50585D;
@@ -67,6 +70,10 @@
     a{
       color: #121212;
       text-decoration: none;
+      transition: .3s color;
+      &:hover{
+        color: $color-primary;
+      }
     }
   }
   &__subtitle{}

@@ -4,11 +4,23 @@
   padding: 4px;
   &__row{
     display: flex;
+    @media (max-width: 767px){
+     flex-wrap: wrap;
+      flex-direction: column;
+    }
   }
   &__field{
-    margin-right: 4px;
-    &--destination{
+    @media (min-width: 768px){
+      margin-right: 4px;
+    }
+    @media (max-width: 767px){
       flex: 1;
+      margin-bottom: 4px;
+    }
+    &--destination{
+      @media (min-width: 768px){
+        flex: 1;
+      }
     }
     &--button{
       .a-button{
@@ -17,6 +29,7 @@
     }
     &:last-child{
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -39,7 +52,13 @@
 
 .o-fixed-searcher{
   background-color: #F2F4F7;
-  padding: 20px 0;
+  padding: 20px 30px;
+  position: sticky;
+  top: 60px;
+  z-index: 2;
+  @media (max-width: 480px){
+    padding: 20px 15px;
+  }
   .o-searcher{
     max-width: $l__container-max-width - 100;
     margin: 0 auto;

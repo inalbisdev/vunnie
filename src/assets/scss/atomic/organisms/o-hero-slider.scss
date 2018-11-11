@@ -12,9 +12,12 @@
     }
   }
   img{
-    height: 600px;
+    height: 450px;
     object-fit: cover;
     width: 100%;
+    @media (max-width: 480px){
+      height: calc(40vh);
+    }
   }
 }
 

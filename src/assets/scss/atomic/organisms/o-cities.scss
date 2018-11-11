@@ -1,6 +1,8 @@
 .o-cities{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: -16px;
+  min-width: 0;
+  width: 100%;
+  margin-bottom: 60px;
+  @media (min-width: 481px){
+    margin-left: -16px;
+  }
 }
