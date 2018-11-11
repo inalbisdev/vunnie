@@ -1,67 +1,80 @@
-.o-searcher{
-  background: rgba(0,0,0,0.50);
+.o-searcher {
+  background: rgba(0, 0, 0, 0.50);
   border-radius: 2px;
   padding: 4px;
-  &__row{
+  &__row {
     display: flex;
-    @media (max-width: 767px){
-     flex-wrap: wrap;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
       flex-direction: column;
     }
   }
-  &__field{
-    @media (min-width: 768px){
+  &__field {
+    @media (min-width: 768px) {
       margin-right: 4px;
     }
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       flex: 1;
       margin-bottom: 4px;
     }
-    &--destination{
-      @media (min-width: 768px){
+    &--destination {
+      @media (min-width: 768px) {
         flex: 1;
       }
     }
-    &--button{
-      .a-button{
-        height: 100%;
+
+  }
+  &__popover {
+    &--lodging {
+      display: none;
+      &.is-active {
+        position: absolute;
+        width: 150px;
+        display: block;
+      }
+      &__field {
+        background-color: red;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      &--adults {
+
       }
     }
-    &:last-child{
-      margin-right: 0;
-      margin-bottom: 0;
+  }
+}
+
+
+  .a-input-placeholder {
+    border: none;
+    height: 45px;
+    border-radius: 2px;
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    &::-webkit-input-placeholder {
+      color: #1e272e;
+      font-size: 12px;
+      font-family: $font-bold;
+      opacity: 1;
     }
   }
-}
 
-.a-input-placeholder{
-  border: none;
-  height: 45px;
-  border-radius: 2px;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  &::-webkit-input-placeholder{
-    color: #1e272e;
-    font-size: 12px;
-    font-family: $font-bold;
-    opacity: 1;
+  .o-fixed-searcher {
+    background-color: #F2F4F7;
+    padding: 20px 30px;
+    position: sticky;
+    top: 60px;
+    z-index: 2;
+    @media (max-width: 480px) {
+      padding: 20px 15px;
+    }
+    .o-searcher {
+      max-width: $l__container-max-width - 100;
+      margin: 0 auto;
+
+    }
   }
-}
-
-
-.o-fixed-searcher{
-  background-color: #F2F4F7;
-  padding: 20px 30px;
-  position: sticky;
-  top: 60px;
-  z-index: 2;
-  @media (max-width: 480px){
-    padding: 20px 15px;
-  }
-  .o-searcher{
-    max-width: $l__container-max-width - 100;
-    margin: 0 auto;
-
-  }
-}

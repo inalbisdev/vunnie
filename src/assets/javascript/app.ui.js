@@ -9,7 +9,9 @@ module.exports = (function () {
         cookies: require('./ui/cookies'),
         validation: require('./ui/validation'),
         slider: require('./ui/slider'),
-        wizard: require('./ui/wizard')
+        wizard: require('./ui/wizard'),
+        searcher: require('./ui/searcher'),
+        inputEnhanced: require('./ui/inputEnhanced')
     };
 })();
 

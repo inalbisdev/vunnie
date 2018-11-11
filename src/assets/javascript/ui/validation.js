@@ -1,6 +1,4 @@
 let $ = require('jquery');
-
-
 module.exports = {
 
     locators: {
@@ -14,6 +12,39 @@ module.exports = {
         $submit: "#submitForm"
     },
 
+    run: function ($input) {
+        const value = $input.val(),
+            type = $input.data('validation'),
+            isRequired = $input.attr('required');
+        if (!isRequired) {
+            return true;
+        }
+        switch (type) {
+            case "string":
+                return this.validateString(value);
+            case "date":
+                return this.validateDate(value);
+            case "number":
+                return this.validateNumber(value, {
+                    max: parseInt($input.attr('max')),
+                    min: parseInt($input.attr('min'))
+                });
+        }
+        return true;
+    },
+
+    valueInRange: function (value, max, min) {
+        return (value >= min && value <= max);
+    },
+    validateString: function (value) {
+        return value.length > 0;
+    },
+    validateDate: function () {
+        return true;
+    },
+    validateNumber: function (value, settings) {
+        return this.valueInRange(value, settings.max, settings.min);
+    },
 
     validateEmail: function (email) {
         let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
