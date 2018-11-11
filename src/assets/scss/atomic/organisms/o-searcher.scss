@@ -1,34 +1,61 @@
-.o-searcher{
-  background: rgba(0,0,0,0.50);
+.o-searcher {
+  background: rgba(0, 0, 0, 0.50);
   border-radius: 2px;
   padding: 4px;
-  &__row{
+  &__row {
     display: flex;
   }
-  &__field{
+  &__field {
     margin-right: 4px;
-    &--destination{
+    &--destination {
       flex: 1;
     }
-    &--button{
-      .a-button{
+
+    &--dates {
+
+    }
+    &--button {
+      .a-button {
         height: 100%;
       }
     }
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
+
+  &__popover {
+    &--lodging {
+      display:none;
+      &.is-active {
+        position: absolute;
+        width: 150px;
+        display: block;
+      }
+      &__field {
+        background-color: red;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      &--adults {
+
+      }
+    }
+  }
+
 }
 
-.a-input-placeholder{
+.a-input-placeholder {
   border: none;
   height: 45px;
   border-radius: 2px;
   background: #fff;
   padding: 15px;
   width: 100%;
-  &::-webkit-input-placeholder{
+  &::-webkit-input-placeholder {
     color: #1e272e;
     font-size: 12px;
     font-family: $font-bold;

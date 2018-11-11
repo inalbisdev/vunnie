@@ -1,19 +1,61 @@
 <div class="o-searcher">
-    <form method="post" name="searcher" id="searcher">
+    <form method="post" name="searcher" id="searcher" onsubmit="return false;">
         <div class="o-searcher__row">
             <div class="o-searcher__field o-searcher__field--destination">
-                <input class="a-input-placeholder" type="text" placeholder="¿Adónde vas?"/>
+                <input data-validation="string" required="true" class="a-input-placeholder" type="text"
+                       placeholder="¿Adónde vas?"/>
             </div>
-            <div class="o-searcher__field o-searcher__field--dates">
-                <input class="a-input-placeholder" type="text" placeholder="Elige una fecha"/>
-            </div>
+
+            <input type="text" name="dates" value="01/01/2018 - 01/15/2018" />
+
             <div class="o-searcher__field o-searcher__field--lodging">
-                <input class="a-input-placeholder" type="text" placeholder="Huespedes"/>
+                <div class="a-input-placeholder" type="text"> Huespedes</div>
+                <div class="o-searcher__popover--lodging">
+                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--adults">
+                        <input class="form-control" id="adults" name="adults" type="number" data-validation="number"
+                               value="1"
+                               step="1"
+                               max="9"
+                               required="required"
+                               min="1">
+                        <label for="adults">Adults</label>
+                        <div class="u_number_controllers" data-target="#adults">
+                            <span class="add"> + </span>
+                            <span class="subtract"> - </span>
+                        </div>
+                    </div>
+                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--children">
+                        <input class="form-control" id="children" name="children" type="number" data-validation="number"
+                               value="0"
+                               step="1"
+                               max="9"
+                               min="0"
+                               required="required"
+                        >
+                        <label for="children">Niños</label>
+                        <div class="u_number_controllers" data-target="#children">
+                            <span class="add"> + </span>
+                            <span class="subtract"> - </span>
+                        </div>
+                    </div>
+                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--babies">
+                        <input class="form-control" id="babies" name="babies" type="number" data-validation="number"
+                               value="0"
+                               step="1"
+                               max="9"
+                               required="required"
+                               min="0">
+                        <label for="babies">Bebés</label>
+                        <div class="u_number_controllers" data-target="#babies">
+                            <span class="add"> + </span>
+                            <span class="subtract"> - </span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="o-searcher__field o-searcher__field--button">
-                <a class="a-button a-button--berlin">
-                    Buscar
-                </a>
+                <input type="submit" class="a-button a-button--berlin" value="Buscar"/>
             </div>
         </div>
     </form>
