@@ -22,10 +22,6 @@ module.exports = {
     openLodging: function () {
         $(this.locators.lodgingContent).toggleClass(this.locators.activeState);
     },
-    openCalendar: function () {
-    },
-
-
     resetStates: function () {
         let that = this;
         _.forEach($(this.locators.field), function (field) {
@@ -33,7 +29,6 @@ module.exports = {
             $element.removeClass(that.locators.successState);
             $element.removeClass(that.locators.errorState);
         });
-
     },
     validateForm: function () {
         let that = this;
@@ -52,12 +47,18 @@ module.exports = {
             }
         });
     },
-    checkGroups: function () {
-        $(this.locators.lodgingGroup).find('')
+    onChangeNumber: function () {
+        const $container = $(this.locators.lodgingContent),
+            adults = $container.find('#adults').val(),
+            children = $container.find('#children').val(),
+            babies = $container.find('#babies').val();
+        this.validateForm(this);
+        $(this.locators.lodging).text('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
+
     },
     bindLodging: function () {
         $(this.locators.lodging).on('click', $.proxy(this.openLodging, this));
-        $(this.locators.lodging).on('change', $.proxy(this.validateForm, this));
+        $(this.locators.lodgingContent + ' input[type="number"]').on('change', $.proxy(this.onChangeNumber, this));
     }
     ,
     bindCalendar: function () {
@@ -74,8 +75,13 @@ module.exports = {
         this.bindSubmit();
     },
     initDate: function () {
-        $('input[name="dates"]').daterangepicker({
+        var $datesInputs = $('input[name="dates"]')
+        $datesInputs.daterangepicker({
             startDate: Date.now(),
+            "autoApply": true,
+            "linkedCalendars": false,
+            "showCustomRangeLabel": false,
+            "opens": "center",
             locale: {
                 "format": "DD/MM/YYYY",
                 "separator": " - ",
@@ -108,9 +114,9 @@ module.exports = {
                     "Diciembre"
                 ],
                 "firstDay": 1
-            },
-            opens: 'left'
+            }
         });
+        $datesInputs.val('Elige tu fecha');
     },
     init: function () {
         this.bindEvents();

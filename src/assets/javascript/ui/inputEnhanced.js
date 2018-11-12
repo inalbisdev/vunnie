@@ -22,16 +22,20 @@ module.exports = {
         $(this.locators.number.add).on('click', function (e) {
             let parent = $(this).closest(that.locators.number.parent);
             that.newValue($(parent.data('target')), true);
+
         });
     },
 
     newValue: function ($element, increment) {
+
         function applyIncrement() {
             return value > limits.max - step ? value : value + step;
         }
+
         function applyDecrement() {
             return value < limits.min + step ? value : value - step;
         }
+
         const limits = {
                 max: parseInt($element.attr('max')),
                 min: parseInt($element.attr('min')),
@@ -39,6 +43,7 @@ module.exports = {
             step = parseInt($element.attr('step')),
             value = parseInt($element.val());
         $element.val(increment ? applyIncrement() : applyDecrement())
+        $element.trigger('change');
     },
 
     enhanceInputNumbers: function () {
