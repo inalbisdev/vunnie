@@ -10,11 +10,21 @@
   margin-top: 7px;
   top: 100px;
   left: 20px;
-  z-index: 3001;
+  z-index: 100;
   display: none;
   font-family: arial;
   font-size: 15px;
   line-height: 1em;
+}
+
+.daterangepicker{
+  .cancelBtn{
+
+  }
+  .applyBtn{
+
+
+  }
 }
 
 .daterangepicker:before, .daterangepicker:after {
@@ -101,7 +111,8 @@
 }
 
 .daterangepicker.show-calendar .drp-buttons {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .daterangepicker.auto-apply .drp-buttons {
@@ -265,12 +276,12 @@
 
 .daterangepicker .drp-buttons {
   clear: both;
-  text-align: right;
   padding: 8px;
   border-top: 1px solid #ddd;
   display: none;
   line-height: 12px;
   vertical-align: middle;
+  justify-content: flex-end;
 }
 
 .daterangepicker .drp-selected {

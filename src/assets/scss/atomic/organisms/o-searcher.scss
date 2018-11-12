@@ -22,6 +22,15 @@
         flex: 1;
       }
     }
+    &--lodging{
+      min-width: 190px;
+    }
+    &--date{
+      min-width: 215px;
+    }
+    &:last-child{
+      margin: 0;
+    }
 
   }
   &__popover {
@@ -45,6 +54,12 @@
       }
     }
   }
+
+  .a-button{
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 

@@ -102,9 +102,13 @@
 
 .modal-is-opened{
   overflow: hidden;
+
   .menu-is-open{
+    .o-modal{
+      z-index: 103;
+    }
     .o-modal-shadow{
-      z-index: 101;
+      z-index: 102;
     }
   }
 }
