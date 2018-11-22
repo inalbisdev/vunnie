@@ -14,7 +14,7 @@
   font-size: $a-button-font-size;
   line-height: $a-button-line-height;
   transition: .6s box-shadow;
-  font-weight: 700;
+  font-family: $font-bold;
   @if $a-animation-ripple {
     overflow: hidden;
   }
@@ -68,7 +68,6 @@
     &:hover{
       background: darken($a-button-moskva-background,20%);
       color: $color-white;
-
     }
   }
 
@@ -79,7 +78,7 @@
     border: 1px solid transparent;
     transition: .6s background-color;
     &:hover{
-      background-color: $color-black;
+      background: darken($a-button-oslo-background,20%);
       color: $color-white;
     }
   }

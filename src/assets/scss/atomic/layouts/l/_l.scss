@@ -2,6 +2,9 @@
 
 .l{
   max-width: 100%;
+
+
+
   &--fit{
     max-width: $l__container-max-width;
     padding-left: $l__container-left-padding;
@@ -16,6 +19,12 @@
     @media (max-width: 480px){
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    &.l--stage-padding{
+      @media (max-width: 480px){
+        padding-right: 0;
+      }
     }
 
   }

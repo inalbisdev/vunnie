@@ -49,4 +49,12 @@
     font-size: 35px;
     line-height: 42px;
   }
+  &-has-left-line{
+    padding-left: 12px;
+    border-left: 3px solid $color-secondary;
+  }
+  &-has-right-line{
+    padding-right: 12px;
+    border-right: 8px solid #333;
+  }
 }

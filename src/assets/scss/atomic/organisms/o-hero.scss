@@ -1,8 +1,9 @@
 .o-hero{
   position: relative;
-  overflow: hidden;
+
   margin-bottom: 50px;
   &__media{
+    overflow: hidden;
     height: 470px;
     img{
       object-fit: cover;

@@ -29,126 +29,14 @@ page: Home
 
 
 <!-- Seccion Ciudades -->
-<section class="l l--fit u-mb-40">
+<section class="l l--stage-padding l--fit u-mb-40">
     <div class="m-heading">
         <h3 class="a-typo-edison a-typo-bold">
             Ciudades pricipales
         </h3>
     </div>
 
-    <div class="o-cities slick-absolute-dots js-slick" data-slick='{"slidesToShow": 5,"dots": true,"arrows": false,"responsive": [{"breakpoint":480,"settings":{"slidesToShow": 1}},{"breakpoint":768,"settings":{"slidesToShow": 3}},{"breakpoint":992,"settings":{"slidesToShow": 4}}]}'>
-        <div>
-            <a href="apartment-list.html" class="m-media-card">
-
-                {{> a-picture
-                        class="m-media-card__media"
-                        overlay="true"
-                        url="assets/media/images/home/barcelona-city.jpg"
-                }}
-
-                <div class="m-media-card__content">
-                    <h3 class="a-typo-bold u-mb-4">
-                        Barcelona
-                    </h3>
-                    <span class="a-typo-einstein">
-                    85€ / precio medio<br> por noche
-                </span>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="apartment-list.html" class="m-media-card">
-
-                {{> a-picture
-                        class="m-media-card__media"
-                        overlay="true"
-                        url="assets/media/images/home/madrid-city.jpg"
-                }}
-                <div class="m-media-card__content">
-                    <h3 class="a-typo-bold u-mb-4">
-                        Madrid
-                    </h3>
-                    <span class="a-typo-einstein a-typo-medium">
-                    64€ / precio medio<br> por noche
-                </span>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="apartment-list.html" class="m-media-card">
-                {{> a-picture
-                        class="m-media-card__media"
-                        overlay="true"
-                        url="assets/media/images/home/paris-city.jpg"
-                }}
-                <div class="m-media-card__content">
-                    <h3 class="a-typo-bold u-mb-4">
-                        Paris
-                    </h3>
-                    <span class="a-typo-einstein  a-typo-medium">
-                    93€ / precio medio<br> por noche
-                </span>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="apartment-list.html" class="m-media-card">
-                {{> a-picture
-                        class="m-media-card__media"
-                        overlay="true"
-                        url="assets/media/images/home/londres-city.jpg"
-                }}
-                <div class="m-media-card__content">
-                    <h3 class="a-typo-bold u-mb-4">
-                        Londres
-                    </h3>
-                    <span class="a-typo-einstein  a-typo-medium">
-                    112€ / precio medio<br> por noche
-                </span>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="apartment-list.html" class="m-media-card">
-                {{> a-picture
-                        class="m-media-card__media"
-                        overlay="true"
-                        url="assets/media/images/home/nueva-york-city.jpg"
-                }}
-                <div class="m-media-card__content">
-                    <h3 class="a-typo-bold u-mb-4">
-                        Nueva York
-                    </h3>
-                    <span class="a-typo-einstein  a-typo-medium">
-                    73€ / precio medio<br> por noche
-                </span>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="apartment-list.html" class="m-media-card">
-                {{> a-picture
-                        class="m-media-card__media"
-                        overlay="true"
-                        url="assets/media/images/home/nueva-york-city.jpg"
-                }}
-                <div class="m-media-card__content">
-                    <h3 class="a-typo-bold u-mb-4">
-                        Nueva York
-                    </h3>
-                    <span class="a-typo-einstein  a-typo-medium">
-                    73€ / precio medio<br> por noche
-                </span>
-                </div>
-            </a>
-        </div>
-
-
-
-
-
-
-    </div>
+    {{>o-cities}}
 
 </section>
 
@@ -166,8 +54,43 @@ page: Home
 
 <section class="l l--fit u-mb-40">
     <div class="m-heading">
-        <h3 class="a-typo-edison a-typo-bold">
+        <h3 class="a-typo-edison a-typo-bold a-typo-has-left-line">
             Noticias sobre nosotros
         </h3>
     </div>
+
+    <div class="o-news-list">
+        <div class="m-card">
+            <div class="a-picture a-picture--overlay  ">
+                <picture class="a-picture__media m-card__media">
+                    <img class="lazyload" data-src="assets/media/images/lodging/lodging-4.jpg" alt="Alt" title="Title" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                </picture>
+            </div>
+            <div class="m-card__content">
+                <h3 class="a-typo-tesla a-typo-bold u-mb-8">
+                    Somos la nueva Start Up de viajes por el mundo. Llevamos tu hogar a cualquier parte.
+                </h3>
+                <span class="a-color-grey">
+                    Somos Vunnie, la compañia que llevara tu hogar a cualquier parte del mundo. #Let’sVunnie
+                </span>
+            </div>
+        </div>
+        <div class="m-card">
+            <div class="a-picture a-picture--overlay  ">
+                <picture class="a-picture__media m-card__media">
+                    <img class="lazyload" data-src="assets/media/images/lodging/lodging-4.jpg" alt="Alt" title="Title" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                </picture>
+            </div>
+            <div class="m-card__content">
+                <h3 class="a-typo-tesla a-typo-bold u-mb-8">
+                    Vunnie por todo el mundo, pero empezaremos en 18 capitales principales.
+                </h3>
+                <span class="a-color-grey">
+                    Nuestro planeta es enorme y nos gustaría llevar tu hogar a todas partes, pero de momento estaremos en 18 ciudades.
+                </span>
+            </div>
+        </div>
+
+    </div>
+
 </section>
