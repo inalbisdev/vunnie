@@ -63,13 +63,7 @@
     }
   }
 }
-.a-gradient{
-  @each $name, $value in $gradient-variations{
-    &-#{$name}{
-      background: $value;
-    }
-  }
-}
+
 
 
 /*3. Media Manipulation*/

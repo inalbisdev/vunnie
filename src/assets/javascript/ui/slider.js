@@ -15,7 +15,12 @@ module.exports = {
             prevArrow: '<a class="slick-arrow slick-arrow--right"></a>'
         });
 
-
+        if($el.hasClass('js-slick-light-box')){
+            $el.slickLightbox({
+                itemSelector        : '.o-hero-slider__media',
+                navigateByKeyboard  : true,
+            });
+        }
 
     },
 

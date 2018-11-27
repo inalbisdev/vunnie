@@ -51,11 +51,10 @@
 /*3 Vendors and themes*/
 @import "../../../../node_modules/slick-carousel/slick/slick.scss";
 @import "../vendors/slick-custom-theme";
+@import "../vendors/slick-lightbox";
 @import "../vendors/daterange";
-/*
-@import "../../../../node_modules/slick-carousel/slick/slick.scss";
 
-*/
+
 
 /*4 Atoms*/
 @import "../atomic/atoms/glob";

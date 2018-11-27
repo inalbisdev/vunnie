@@ -49,6 +49,11 @@
     font-size: 35px;
     line-height: 42px;
   }
+  &-curie{
+    font-size: 14px;
+    line-height: 16px;
+  }
+
   &-has-left-line{
     padding-left: 12px;
     border-left: 3px solid $color-secondary;

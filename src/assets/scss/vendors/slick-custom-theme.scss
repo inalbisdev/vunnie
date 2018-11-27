@@ -19,6 +19,10 @@
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: transparent;
+    outline: none;
     &::before{
       border: solid #fff;
       border-width: 0 3px 3px 0;
@@ -30,6 +34,7 @@
       transition: .4s border-color;
       content: "";
     }
+    &.slick-prev,
     &--left{
       &::before{
         transform: rotate(135deg);
@@ -37,7 +42,9 @@
       left: 30px;
 
     }
+    &.slick-next,
     &--right{
+
       right: 30px;
       &::before{
         transform: rotate(-45deg);
@@ -81,8 +88,8 @@
           outline: none;
           border: 1px solid $color-primary;
           background: #fff;
-          width: 20px;
-          height: 20px;
+          width: 16px;
+          height: 16px;
           border-radius: 50%;
           text-indent: -9999px;
           padding: 0;

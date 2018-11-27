@@ -6,13 +6,11 @@
   outline: none;
   display: block;
   overflow: hidden;
+  border-radius: 4px;
   @media (min-width: 481px){
     margin-left: 16px;
   }
   &:hover{
-    .a-picture:before{
-      background: none;
-    }
     .m-media-card__media img{
       transform: scale(1.05);
     }
@@ -47,10 +45,22 @@
       transform: translateY(-50%) translateZ(0);
     }
     h3{
-      font-size: 16px;
-      line-height: 19px;
-      @media (max-width: 480px){
-        font-size: 20px;
+      font-size: 20px;
+      line-height: 24px;
+      position: relative;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      &::after{
+        position: absolute;
+        width: 60px;
+        content: "";
+        background: #fff;
+        border-radius: 4px;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;;
       }
     }
   }

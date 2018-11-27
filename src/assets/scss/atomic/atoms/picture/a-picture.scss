@@ -42,6 +42,19 @@
       z-index: 1;
       border-radius: $a-picture-border-radius;
     }
+    &-gradient{
+      &::before{
+        opacity: 0.25;
+        background-image: linear-gradient(180deg, rgba(171,43,255,0.10) 2%, #7313FE 90%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: "";
+        z-index: 1;
+      }
+    }
   }
 
 }

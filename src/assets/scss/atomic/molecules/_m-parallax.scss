@@ -2,6 +2,7 @@
   position: relative;
   display: block;
   overflow: hidden;
+  border-radius: 4px;
   &:after{
     content: "";
     position: absolute;
@@ -12,7 +13,7 @@
     left: 0;
     opacity: 0;
     transition: .4s opacity;
-    border-radius: 2px;
+    border-radius: 4px;
   }
   &:hover{
     &:after{

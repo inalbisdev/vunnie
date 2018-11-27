@@ -1,6 +1,6 @@
 .o-searcher {
   background: rgba(0, 0, 0, 0.50);
-  border-radius: 2px;
+  border-radius: $base-border-radius;
   padding: 4px;
   &__icon{
     position: absolute;

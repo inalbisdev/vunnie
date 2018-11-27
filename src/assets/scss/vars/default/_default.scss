@@ -63,34 +63,17 @@ $screen-l-min: 1024px;
 $screen-l-max: 1199px;
 $screen-xl-min: 1200px;
 
-                        /*xs,  s,     m,     l,     xl,     xxl*/
-$gel-breakpoint-sizes: (240px, 360px, 480px, 768px, 1024px, 1280px) !default;
-
-
-/*1.3 Gel Grid Configuration*/
-$gel-grid-enable--markup-output: true !default;
-$gel-spacing-unit: 16px !default;
 
 /*1.4 Color Variations*/
+$color-white: #fff !default;
 $color-primary: #7313FE;
 $color-primary-dark: darken($color-primary,10%);
 $color-secondary: #FF4343;
 $color-secondary-dark: darken($color-secondary,10%);
 $color-secondary-light: lighten($color-secondary,10%);
-$color-black: #000 !default;
+$color-black: #1A1A1A !default;
 $color-grey: #50585D !default;
 
-
-
-$vunnie-gradient: linear-gradient(225deg, #4800B0 0%, #9013FE 100%);
-
-$gradient-klarenz: linear-gradient(to right, #e63020 0%,#e5007e 100%);
-
-$gradient-loading: linear-gradient(135deg, $color-primary 0%,$color-primary-dark 25%, $color-secondary 50%,$color-secondary-light 75%,$color-secondary-dark 100%) !default;
-
-
-
-$color-white: #fff !default;
 $brand-colors: (
         "primary": $color-primary,
         "secondary": $color-secondary,
@@ -99,11 +82,6 @@ $brand-colors: (
         "grey" : $color-grey
 ) !default;
 
-/*1.5 Gradient Variations*/
-$gradient-variations: (
-        "klarenz" : $gradient-klarenz,
-        "loading" : $gradient-loading
-) !default;
 
 /*1.6 Vector Icons Mapping and Sizes*/
 $icons-font-family: "Way Icons" !default;
@@ -165,11 +143,10 @@ $a-button-oslo-color: $color-white !default;
 $a-link-color: $color-black !default;;
 
 /*2.4 Picture*/
-$a-picture-border-radius: 2px !default;
+$base-border-radius: 4px !default;
+$a-picture-border-radius: $base-border-radius !default;
 
-/*2.5 Tags*/
-$a-tag-background: $color-white !default;
-$a-tag-border-radius: 12px !default;
+
 
 
 /*3.Molecules*/

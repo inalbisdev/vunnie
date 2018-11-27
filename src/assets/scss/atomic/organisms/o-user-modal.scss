@@ -3,7 +3,6 @@
 
 
   &__heading{
-    color: $color-white;
     margin-bottom: 25px;
   }
   &__logo{
@@ -27,14 +26,12 @@
   }
 
   &__footer{
-    color: #fff;
     text-align: center;
     margin-top: 35px;
     .a-separator{
       margin: 15px 0;
     }
     a{
-      color: #fff;
       transition: .4s color;
       text-decoration: none;
       &:hover{
@@ -44,18 +41,18 @@
   }
 
   &__forgotten{
-    font-size: 12px;
-    font-family: $font-bold;
-    line-height: 15px;
+    font-size: 14px;
+    font-family: $font-medium;
+    line-height: 16px;
+    color: #2F2F2F;
   }
   &__register{
     font-size: 14px;
-    font-family: $font-bold;
     line-height: 17px;
     a{
-      color: #fff;
+      color: #2F2F2F;
       font-size: 14px;
-      font-family: $font-bold;
+      font-family: $font-medium;
       line-height: 17px;
     }
   }

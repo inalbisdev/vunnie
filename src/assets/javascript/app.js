@@ -2,6 +2,7 @@ let $ = require('jquery');
 let lazy = require('lazysizes');
 let slick = require('slick-carousel');
 let _ = require('lodash');
+let slickLightBox = require('./vendor/slick-lightbox');
 
 
 

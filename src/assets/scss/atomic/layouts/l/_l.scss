@@ -4,6 +4,11 @@
   max-width: 100%;
 
 
+  &--has-bg{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #F9F4FF;
+  }
 
   &--fit{
     max-width: $l__container-max-width;
