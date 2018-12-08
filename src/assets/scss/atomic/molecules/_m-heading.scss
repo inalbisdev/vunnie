@@ -1,3 +1,15 @@
 .m-heading{
   margin-bottom: 30px;
+  &--has-logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__logo{
+    padding-right: 16px;
+    font-size: 28px;
+    line-height: 33px;
+    color: $color-primary;
+    font-family: $font-bold;
+  }
 }

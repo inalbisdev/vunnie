@@ -2,7 +2,7 @@
   "lodging": [
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",
@@ -23,7 +23,7 @@
     },
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",
@@ -44,7 +44,7 @@
     },
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",
@@ -65,7 +65,7 @@
     },
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",
@@ -86,7 +86,7 @@
     },
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",
@@ -107,7 +107,7 @@
     },
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",
@@ -128,7 +128,7 @@
     },
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",
@@ -149,7 +149,7 @@
     },
     {
       "elem": "m-card",
-      "url" :"apartment-list.html",
+      "url" :"apartment-detail.html",
       "attr": [
         {
           "elemclass": "",

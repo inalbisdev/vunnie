@@ -1,0 +1,101 @@
+<div class="o-user-modal">
+    <div id="userModalSlider" class="js-slick"
+         data-slick='{"items": 1,"arrows": false,"draggable": true,"infinite": false,"fade":true,"adaptiveHeight": true}'>
+        <div class="o-user-modal__form o-user-modal__form--login">
+            <div class="o-user-modal__heading">
+                <div class="o-user-modal__logo">
+                    {{> a-logo}}
+                </div>
+                <div class="o-user-modal__title">Iniciar sesión</div>
+                <div class="o-user-modal__text">Si ya eres usuario introduce tu correo electrónico y
+                    contraseña.
+                </div>
+            </div>
+            <div class="o-user-modal__content">
+                <form method="post" name="login">
+                    <div class="m-field">
+                        <input class="a-input" type="email" placeholder="Introduce tu email"
+                               name="emailLog" id="emailLog"/>
+                        <label class="m-field__label" for="emailLog">Email</label>
+                    </div>
+                    <div class="m-field">
+                        <input class="a-input" type="password" placeholder="Introduce tu password"
+                               name="passwordLog" id="passwordLog"/>
+                        <label class="m-field__label" for="passwordLog">Password</label>
+                    </div>
+
+                    <a class="a-button a-button--submit a-button--moskva">Iniciar Sesión</a>
+
+
+                </form>
+            </div>
+            <div class="o-user-modal__footer">
+                <a class="o-user-modal__forgotten" data-step="2" href="#">¿Has olvidado tu
+                    contraseña?</a>
+                <a class="a-separator"></a>
+                <div class="o-user-modal__register">¿No tienes cuenta?<a href="#" data-step="1">
+                    Regístrate</a></div>
+            </div>
+        </div>
+        <div class="o-user-modal__form o-user-modal__form--register">
+            <div class="o-user-modal__heading">
+                <div class="o-user-modal__logo">
+                    {{> a-logo}}
+                </div>
+                <div class="o-user-modal__title">Registro de usuario</div>
+                <div class="o-user-modal__text">Si ya eres usuario introduce tu correo electrónico y
+                    contraseña.
+                </div>
+            </div>
+            <div class="o-user-modal__content">
+                <form method="post" name="register">
+                    <div class="m-field">
+                        <input class="a-input" type="email" placeholder="Introduce tu email"
+                               name="emailReg" id="emailReg"/>
+                        <label class="m-field__label" for="emailReg">Email</label>
+                    </div>
+                    <div class="m-field">
+                        <input class="a-input" type="password" placeholder="Introduce tu password"
+                               name="passwordReg" id="passwordReg"/>
+                        <label class="m-field__label" for="passwordReg">Password</label>
+                    </div>
+
+                    <a class="a-button a-button--submit a-button--moskva">Continuar</a>
+
+
+                </form>
+            </div>
+            <div class="o-user-modal__footer">
+                <a class="o-user-modal__forgotten" data-step="0" href="#">Iniciar sesión</a>
+                <a class="a-separator"></a>
+            </div>
+        </div>
+
+        <div class="o-user-modal__form o-user-modal__form--recover">
+            <div class="o-user-modal__heading">
+                <div class="o-user-modal__logo">
+                    {{> a-logo}}
+                </div>
+                <div class="o-user-modal__title">Recuperar contraseña</div>
+                <div class="o-user-modal__text">Si ya eres usuario introduce tu correo electrónico y
+                    te enviaremos la contraseña a tu email.
+                </div>
+            </div>
+            <div class="o-user-modal__content">
+                <form method="post" name="recover">
+                    <div class="m-field">
+                        <input class="a-input" type="email" placeholder="Introduce tu email"
+                               name="emailRecover" id="emailRecover"/>
+                        <label class="m-field__label" for="emailRecover">Email</label>
+                    </div>
+                    <a class="a-button a-button--submit a-button--moskva">Enviar</a>
+
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

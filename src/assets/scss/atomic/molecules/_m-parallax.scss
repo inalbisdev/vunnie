@@ -22,6 +22,7 @@
     .m-parallax__media img{
       transform: scale(1.1);
     }
+    .m-parallax__subtitle,
     .m-parallax__title{
       color: $color-secondary;
     }
@@ -36,14 +37,16 @@
       width: 100%;
     }
   }
-  &__title{
+  &__content{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
     right: 0;
-    text-align: center;
     z-index: 1;
+    text-align: center;
+  }
+  &__title{
     font-size: 50px;
     line-height: 60px;
     font-family: $font-bold;
@@ -53,5 +56,12 @@
       font-size: 36px;
       line-height: 46px;
     }
+  }
+  &__subtitle{
+    font-family: $font-medium;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-white;
+    transition: .3s color;
   }
 }

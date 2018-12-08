@@ -7,8 +7,11 @@
     {{> header}}
     <main class="l-main__main">
         {{> body}}
-
-        {{> o-user-modal}}
+        {{#> o-modal id="userModal" class="o-modal--user"}}
+            {{#*inline "content"}}
+                {{> o-user-modal}}
+            {{/inline}}
+        {{/o-modal}}
     </main>
     {{>a-scroll-top}}
     {{> m-cookies}}

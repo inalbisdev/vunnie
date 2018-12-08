@@ -19,6 +19,7 @@ module.exports = {
             $el.slickLightbox({
                 itemSelector        : '.o-hero-slider__media',
                 navigateByKeyboard  : true,
+                imageMaxHeight: 1
             });
         }
 

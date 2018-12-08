@@ -84,16 +84,43 @@ $brand-colors: (
 
 
 /*1.6 Vector Icons Mapping and Sizes*/
-$icons-font-family: "Way Icons" !default;
-$icons-file-name: "way" !default;
+$icons-font-family: "Vunnie Icons" !default;
+$icons-file-name: "vunnie" !default;
 $icons-base-font-size: 16px !default;
 $icons: (
-        "arrow-left": "\ea01",
-        "arrow-right": "\ea02",
-        "favorite-filled": "\ea03",
-        "favorite": "\ea04",
-        "review": "\ea05",
-        "share": "\ea06",
+        "accessibility": "\e900",
+        "air-conditioner": "\e901",
+        "barbecue": "\e902",
+        "bath": "\e903",
+        "calefaction": "\e904",
+        "closet": "\e905",
+        "coffe-maker": "\e906",
+        "dishwasher": "\e907",
+        "double-bed": "\e908",
+        "dryer": "\e909",
+        "equipped-kitchen": "\e90a",
+        "griddle": "\e90b",
+        "gym": "\e90c",
+        "lock": "\e90d",
+        "microwave": "\e90e",
+        "no-parking": "\e90f",
+        "no-pets": "\e910",
+        "no-smoking": "\e911",
+        "oven": "\e912",
+        "parking": "\e913",
+        "pets": "\e914",
+        "pool": "\e915",
+        "refrigerator": "\e916",
+        "shower": "\e917",
+        "single-bed": "\e918",
+        "smoking": "\e919",
+        "terrace": "\e91a",
+        "towels": "\e91b",
+        "tv": "\e920",
+        "unlock": "\e921",
+        "washer": "\e922",
+        "wifi": "\e923",
+
 ) !default;
 $icons-sizes: (
         "x1" : $icons-base-font-size * 1.25,

@@ -11,6 +11,14 @@
 }
 */
 
+@font-face {
+  font-family: $icons-font-family;
+  font-style: normal;
+  font-display: swap;
+  src: local($icons-font-family),
+  url(../fonts/icons/vunnie.woff) format('woff');
+}
+
 .a-icon {
   font-family: $icons-font-family;
 

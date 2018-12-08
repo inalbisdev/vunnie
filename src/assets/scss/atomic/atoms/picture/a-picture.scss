@@ -44,8 +44,8 @@
     }
     &-gradient{
       &::before{
-        opacity: 0.25;
-        background-image: linear-gradient(180deg, rgba(171,43,255,0.10) 2%, #7313FE 90%);
+        opacity: 0.40;
+        background-image: linear-gradient(-180deg, rgba(171, 43, 255, 0.1) 30%, #7313FD 100%);
         top: 0;
         left: 0;
         width: 100%;
