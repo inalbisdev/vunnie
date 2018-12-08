@@ -1,41 +1,56 @@
-let $ = require('jquery');
-let _ = require('lodash');
+var $ = require('jquery');
+var _ = require('lodash');
 require('bootstrap-daterangepicker');
 module.exports = {
     locators: {
-        form: '.o-searcher',
-        field: '.o-searcher__field',
-        lodging: '.o-searcher__field--lodging .a-input-placeholder',
-        lodgingGroup: '.o-searcher__field--lodging',
-        destination: '.o-searcher__field--destination input',
-        date: '.o-searcher__field--dates input',
-        submit: '.o-searcher__field--button input[type="submit"]',
+        searcher: {
+            form: '.o-searcher',
+            field: '.o-searcher__field',
+            lodgingContainer: '.o-searcher__field--lodging',
+            lodging: '.o-searcher__field--lodging .a-input-placeholder',
+            lodgingGroup: '.o-searcher__field--lodging',
+            destination: '.o-searcher__field--destination input',
+            date: '.o-searcher__field--dates input',
+            submit: '.o-searcher__field--button input[type="submit"]',
+            lodgingContent: '.o-searcher__popover--lodging',
+            dateContent: '.o-searcher__popover--dates'
+        },
 
-        lodgingContent: '.o-searcher__popover--lodging',
-        dateContent: '.o-searcher__popover--dates',
-
+        modal: {
+            form: '.o-modal form',
+            field: '.m-field'
+        },
         activeState: 'is-active',
         errorState: 'is-error',
         successState: 'is-success'
     },
     validations: require('../ui/validation'),
     openLodging: function () {
-        $(this.locators.lodgingContent).toggleClass(this.locators.activeState);
+        $(this.locators.searcher.lodgingContent).addClass(this.locators.activeState);
     },
-    resetStates: function () {
-        let that = this;
-        _.forEach($(this.locators.field), function (field) {
+    closeLodging: function () {
+        $(this.locators.searcher.lodgingContent).removeClass(this.locators.activeState);
+    },
+    toggleLodging: function () {
+        $(this.locators.searcher.lodgingContent).toggleClass(this.locators.activeState);
+    },
+    resetStates: function (field) {
+        var that = this;
+        _.forEach($(field), function (field) {
             const $element = $(field);
             $element.removeClass(that.locators.successState);
             $element.removeClass(that.locators.errorState);
         });
     },
-    validateForm: function () {
-        let that = this;
-        this.resetStates();
-        _.forEach($(this.locators.form + ' input'), function (input) {
-            let $input = $(input),
-                $parent = $input.closest(that.locators.field);
+    validateForm: function (locatorForm, locatorField) {
+        var that = this;
+        this.resetStates(locatorField);
+        console.log('entra');
+        _.forEach($(locatorForm + ' input'), function (input) {
+            console.log(input);
+            var $input = $(input),
+                $parent = $input.closest(locatorField);
+            console.log($parent.length);
             if (that.validations.run($input)) {
                 if (!$parent.hasClass(that.locators.errorState)) {
                     $parent.addClass(that.locators.successState);
@@ -48,31 +63,58 @@ module.exports = {
         });
     },
     onChangeNumber: function () {
-        const $container = $(this.locators.lodgingContent),
+        const $container = $(this.locators.searcher.lodgingContent),
             adults = $container.find('#adults').val(),
             children = $container.find('#children').val(),
             babies = $container.find('#babies').val();
         this.validateForm(this);
-        $(this.locators.lodging).text('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
+        $(this.locators.searcher.lodging).text('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
 
     },
+    isInputLodging: function ($target) {
+        return $target.closest(this.locators.searcher.lodgingContainer).length > 0;
+    },
+    isLodgingContent: function ($target) {
+        return $target.closest(this.locators.searcher.lodgingContent).length > 0;
+    },
     bindLodging: function () {
-        $(this.locators.lodging).on('click', $.proxy(this.openLodging, this));
+        var that = this;
         $(this.locators.lodgingContent + ' input[type="number"]').on('change', $.proxy(this.onChangeNumber, this));
+        $(document).on('click', function (e) {
+            var $target = $(e.target);
+            if (that.isLodgingContent($target)) {
+                return;
+            }
+            if (that.isInputLodging($target) && !$(that.locators.lodgingContent).hasClass('is-active')) {
+                that.openLodging();
+                return;
+            }
+            that.closeLodging();
+        });
     }
     ,
     bindCalendar: function () {
         $(this.locators.date).on('click', this.openCalendar);
     }
     ,
-    bindSubmit: function () {
-        $(this.locators.submit).on('click', $.proxy(this.validateForm, this));
+    bindSubmitSearcher: function () {
+        var that = this;
+        $(this.locators.searcher.submit).on('click', function () {
+            that.validateForm(that.locators.searcher.form, that.locators.searcher.field);
+        });
     }
     ,
+    bindModals: function () {
+        var that = this;
+        $(document).on('click', that.locators.modal.form, function () {
+            that.validateForm(that.locators.modal.form, that.locators.modal.field);
+        })
+    },
     bindEvents: function () {
         this.bindLodging();
         this.bindCalendar();
-        this.bindSubmit();
+        this.bindSubmitSearcher();
+        this.bindModals();
     },
     initDate: function () {
         var $datesInputs = $('input[name="dates"]')

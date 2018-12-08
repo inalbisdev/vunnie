@@ -29,6 +29,12 @@ module.exports = {
                     max: parseInt($input.attr('max')),
                     min: parseInt($input.attr('min'))
                 });
+            case "email":
+                return this.validateEmail(
+                   value
+                );
+            case "password":
+                return this.validatePassword(value);
         }
         return true;
     },
@@ -49,6 +55,9 @@ module.exports = {
     validateEmail: function (email) {
         let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
+    },
+    validatePassword: function (password) {
+        return password.length > 6;
     },
 
     validatePhone: function (phone) {

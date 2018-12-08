@@ -12,19 +12,19 @@
                 </div>
             </div>
             <div class="o-user-modal__content">
-                <form method="post" name="login">
+                <form method="post" name="login" onsubmit="return false">
                     <div class="m-field">
-                        <input class="a-input" type="email" placeholder="Introduce tu email"
+                        <input required class="a-input" type="email" placeholder="Introduce tu email"
                                name="emailLog" id="emailLog"/>
                         <label class="m-field__label" for="emailLog">Email</label>
                     </div>
                     <div class="m-field">
-                        <input class="a-input" type="password" placeholder="Introduce tu password"
+                        <input required class="a-input" type="password" placeholder="Introduce tu password"
                                name="passwordLog" id="passwordLog"/>
                         <label class="m-field__label" for="passwordLog">Password</label>
                     </div>
 
-                    <a class="a-button a-button--submit a-button--moskva">Iniciar Sesión</a>
+                    <input type="submit" class="a-button a-button--submit a-button--moskva" value="Iniciar Sesión" />
 
 
                 </form>
@@ -48,19 +48,19 @@
                 </div>
             </div>
             <div class="o-user-modal__content">
-                <form method="post" name="register">
+                <form method="post" name="register" onsubmit="return false">
                     <div class="m-field">
-                        <input class="a-input" type="email" placeholder="Introduce tu email"
-                               name="emailReg" id="emailReg"/>
+                        <input data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
+                               required name="emailReg" id="emailReg"/>
                         <label class="m-field__label" for="emailReg">Email</label>
                     </div>
                     <div class="m-field">
-                        <input class="a-input" type="password" placeholder="Introduce tu password"
+                        <input required data-validation="password" class="a-input" type="password" placeholder="Introduce tu password"
                                name="passwordReg" id="passwordReg"/>
                         <label class="m-field__label" for="passwordReg">Password</label>
                     </div>
 
-                    <a class="a-button a-button--submit a-button--moskva">Continuar</a>
+                    <input type="submit" class="a-button a-button--submit a-button--moskva" value="Continuar"/>
 
 
                 </form>
@@ -82,13 +82,13 @@
                 </div>
             </div>
             <div class="o-user-modal__content">
-                <form method="post" name="recover">
+                <form method="post" name="recover" onsubmit="return false">
                     <div class="m-field">
-                        <input class="a-input" type="email" placeholder="Introduce tu email"
-                               name="emailRecover" id="emailRecover"/>
+                        <input data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
+                               name="emailRecover" id="emailRecover" required/>
                         <label class="m-field__label" for="emailRecover">Email</label>
                     </div>
-                    <a class="a-button a-button--submit a-button--moskva">Enviar</a>
+                    <input type="submit" class="a-button a-button--submit a-button--moskva" value="Enviar"/>
 
 
                 </form>

@@ -11,7 +11,8 @@ module.exports = (function () {
         slider: require('./ui/slider'),
         wizard: require('./ui/wizard'),
         searcher: require('./ui/searcher'),
-        inputEnhanced: require('./ui/inputEnhanced')
+        inputEnhanced: require('./ui/inputEnhanced'),
+        autocomplete: require('./ui/autocomplete')
     };
 })();
 
