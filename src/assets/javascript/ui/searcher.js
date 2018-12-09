@@ -24,7 +24,7 @@ module.exports = {
         activeState: 'is-active',
         errorState: 'is-error',
         successState: 'is-success',
-        messageDiv: '.message_div'
+        messageDiv: 'field-error'
     },
     validations: require('../ui/validation'),
     openLodging: function () {
@@ -104,6 +104,11 @@ module.exports = {
             }
             that.closeLodging();
         });
+
+        $('.o-searcher__popover--apply a').on('click',function (e) {
+            e.preventDefault();
+            that.closeLodging();
+        })
     }
     ,
     bindCalendar: function () {

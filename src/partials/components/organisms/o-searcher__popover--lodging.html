@@ -1,0 +1,75 @@
+<div class="o-searcher__popover--lodging">
+    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--adults">
+        <label for="adults">Adultos</label>
+        <div class="popover-controllers">
+            <div class="u_number_controllers" data-target="#adults">
+                <span class="subtract">
+                    {{> subtract-icon}}
+                </span>
+                <input class="form-control" id="adults" name="adults" type="number"
+                       data-error="Número incorrecto"
+                       data-validation="number" readonly
+                       value="1"
+                       step="1"
+                       max="9"
+                       required="required"
+                       min="1">
+                <span class="add">
+                    {{> add-icon}}
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--children">
+        <label for="children">Niños</label>
+        <div class="popover-controllers">
+
+            <div class="u_number_controllers" data-target="#children">
+            <span class="subtract">
+                {{> subtract-icon}}
+                </span>
+                <input class="form-control" id="children" name="children" type="number"
+                       data-error="Número incorrecto"
+                       data-validation="number"
+                       value="0"
+                       step="1"
+                       max="9"
+                       min="0"
+                       required="required"
+                       readonly
+                >
+                <span class="add">
+                    {{> add-icon}}
+                </span>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--babies">
+        <label for="babies">Bebés</label>
+        <div class="popover-controllers">
+            <div class="u_number_controllers" data-target="#babies">
+                <span class="subtract">
+                    {{> subtract-icon}}
+                </span>
+                <input class="form-control" id="babies" name="babies" type="number"
+                       data-error="Número incorrecto"
+                       data-validation="number"
+                       value="0"
+                       step="1"
+                       max="9"
+                       required="required"
+                       readonly
+                       min="0">
+                <span class="add">
+                    {{> add-icon}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="o-searcher__popover--apply">
+        <a class="a-typo-bold a-color-secondary a-typo-einstein">Aplicar</a>
+    </div>
+</div>

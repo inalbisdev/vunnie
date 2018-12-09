@@ -1,12 +1,8 @@
 <div class="o-searcher {{class}}">
     <form method="post" name="searcher" id="searcher" onsubmit="return false;">
         <div class="o-searcher__row">
-
-
             {{#ifeq type "simple"}}
-
             {{else}}
-
                 <div class="o-searcher__field o-searcher__field--destination">
                     <div class="o-searcher__icon">
 
@@ -91,142 +87,8 @@
                     </svg>
                 </div>
                 <div class="a-input-placeholder" type="text">Huéspedes</div>
-                <div class="o-searcher__popover--lodging">
-                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--adults">
-                        <label for="adults">Adultos</label>
 
-                        <div class="popover-controllers">
-                            <div class="u_number_controllers" data-target="#adults">
-                                <span class="subtract">
-                                    <svg width="20px" height="20px" viewBox="0 0 455 31" version="1.1"
-                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="minus" fill="#ffffff">
-                                                <rect id="Rectangle" x="0" y="0.5" width="455" height="30"></rect>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <input class="form-control" id="adults" name="adults" type="number"
-                                       data-error="Número incorrecto"
-                                       data-validation="number" readonly
-                                       value="1"
-                                       step="1"
-                                       max="9"
-                                       required="required"
-                                       min="1">
-                                <span class="add">
-                                    <svg width="20px" height="20px" viewBox="0 0 455 455" version="1.1"
-                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="plus" fill="#ffffff">
-                                                <polygon id="Path"
-                                                         points="455 212.5 242.5 212.5 242.5 0 212.5 0 212.5 212.5 0 212.5 0 242.5 212.5 242.5 212.5 455 242.5 455 242.5 242.5 455 242.5"></polygon>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--children">
-                        <label for="children">Niños</label>
-
-
-                        <div class="popover-controllers">
-
-                            <div class="u_number_controllers" data-target="#children">
-
-                            <span class="subtract">
-                                    <svg width="20px" height="20px" viewBox="0 0 455 31" version="1.1"
-                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="minus" fill="#ffffff">
-                                                <rect id="Rectangle" x="0" y="0.5" width="455" height="30"></rect>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--children">
-                        <label for="children">Niños</label>
-
-
-                        <div class="popover-controllers">
-                            <input class="form-control" id="children" name="children" type="number"
-                                   data-error="Número incorrecto"
-                                   data-validation="number"
-                                   value="0"
-                                   step="1"
-                                   max="9"
-                                   min="0"
-                                   required="required"
-                            >
-                        <div class="u_number_controllers" data-target="#children">
-                                <span class="add">
-                                    <svg width="20px" height="20px" viewBox="0 0 455 455" version="1.1"
-                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="plus" fill="#ffffff">
-                                                <polygon id="Path"
-                                                         points="455 212.5 242.5 212.5 242.5 0 212.5 0 212.5 212.5 0 212.5 0 242.5 212.5 242.5 212.5 455 242.5 455 242.5 242.5 455 242.5"></polygon>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--babies">
-                        <label for="babies">Bebés</label>
-
-
-                        <div class="popover-controllers">
-
-                            <div class="u_number_controllers" data-target="#babies">
-
-                                <span class="subtract">
-                                    <svg width="20px" height="20px" viewBox="0 0 455 31" version="1.1"
-                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="minus" fill="#ffffff">
-                                                <rect id="Rectangle" x="0" y="0.5" width="455" height="30"></rect>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <input class="form-control" id="babies" name="babies" type="number"
-                                       data-error="Número incorrecto"
-                                       data-validation="number"
-                                       value="0"
-                                       step="1"
-                                       max="9"
-                                       required="required"
-                                       min="0">
-                                <span class="add">
-                                    <svg width="20px" height="20px" viewBox="0 0 455 455" version="1.1"
-                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="plus" fill="#ffffff">
-                                                <polygon id="Path"
-                                                         points="455 212.5 242.5 212.5 242.5 0 212.5 0 212.5 212.5 0 212.5 0 242.5 212.5 242.5 212.5 455 242.5 455 242.5 242.5 455 242.5"></polygon>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="o-searcher__popover--apply">
-                        <a class="a-typo-bold a-color-secondary a-typo-einstein">Aplicar</a>
-                    </div>
-                </div>
+                {{> o-searcher__popover--lodging}}
             </div>
 
             <div class="o-searcher__field o-searcher__field--button">
