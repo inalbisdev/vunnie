@@ -20,8 +20,12 @@
                             </g>
                         </svg>
                     </div>
-                    <input id="searchBox" data-validation="string" required="true"
-                           class="a-input-placeholder search-field" type="text"
+                    <input id="searchBox"
+                           data-validation="string"
+                           required="true"
+                           class="a-input-placeholder search-field"
+                           type="text"
+                           data-error="Seleccione un destino"
                            placeholder="¿Adónde vas?"/>
                     <ul id="searchResults" class="term-list u-hidden"></ul>
                 </div>
@@ -104,6 +108,7 @@
                                     </svg>
                                 </span>
                                 <input class="form-control" id="adults" name="adults" type="number"
+                                       data-error="Número incorrecto"
                                        data-validation="number" readonly
                                        value="1"
                                        step="1"
@@ -143,15 +148,25 @@
                                         </g>
                                     </svg>
                                 </span>
-                                <input class="form-control" id="children" name="children" type="number"
-                                       data-validation="number"
-                                       readonly
-                                       value="0"
-                                       step="1"
-                                       max="9"
-                                       min="0"
-                                       required="required"
-                                >
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="o-searcher__popover--lodging__field o-searcher__popover--lodging--children">
+                        <label for="children">Niños</label>
+
+
+                        <div class="popover-controllers">
+                            <input class="form-control" id="children" name="children" type="number"
+                                   data-error="Número incorrecto"
+                                   data-validation="number"
+                                   value="0"
+                                   step="1"
+                                   max="9"
+                                   min="0"
+                                   required="required"
+                            >
+                        <div class="u_number_controllers" data-target="#children">
                                 <span class="add">
                                     <svg width="20px" height="20px" viewBox="0 0 455 455" version="1.1"
                                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -186,8 +201,8 @@
                                     </svg>
                                 </span>
                                 <input class="form-control" id="babies" name="babies" type="number"
+                                       data-error="Número incorrecto"
                                        data-validation="number"
-                                       readonly
                                        value="0"
                                        step="1"
                                        max="9"
