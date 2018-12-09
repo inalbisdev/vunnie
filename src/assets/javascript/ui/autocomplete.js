@@ -38,7 +38,7 @@ module.exports = {
             this.appendResults();
         }
         else if (this.model.inputTerms.length > 0 && this.model.terms.length !== 0) {
-            document.getElementById(this.locators.ul).innerHTML = '<li> No hay coincidencias con:'
+            document.getElementById(this.locators.ul).innerHTML = '<li style="pointer-events: none;"> No hay coincidencias con:'
                 + this.model.inputTerms
                 + ' </li>';
 
