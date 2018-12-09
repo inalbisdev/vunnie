@@ -27,6 +27,11 @@
   &__logo{
     display: block;
     line-height: 0;
+    .a-logo__letter{
+      @media (max-width: 480px){
+        display: none;
+      }
+    }
   }
 
   &__nav {
@@ -86,7 +91,7 @@
     }
     &--mobile {
       position: fixed;
-      top: 0;
+      top: 60px;
       width: 100%;
       left: 0;
       height: 100%;

@@ -1,5 +1,5 @@
 module.exports = {
-    searchIndex: ['Madrid', 'Barcelona', 'Barcna', 'Barcllorca'],
+    searchIndex: ['Madrid', 'Barcelona', 'Paris', 'Bilbao'],
     locators: {
         input: "searchBox",
         ul: "searchResults"
@@ -86,6 +86,7 @@ module.exports = {
     bindClick: function () {
         $("#searchResults").on('click', 'li', function () {
             $("#searchBox").val($(this).text());
+            $("#searchResults").addClass('u-hidden')
         })
     },
     init: function () {

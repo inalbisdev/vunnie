@@ -1,0 +1,45 @@
+.term-list {
+  border-radius: 4px;
+  color: $color-black;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  top: calc(100% + 10px);
+  padding: 15px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  &:before,
+  &:after{
+    position: absolute;
+    display: inline-block;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 10px;
+
+  }
+  &:before{
+    top: -7px;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+  }
+  &:after{
+    top: -6px;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid transparent;
+  }
+  li{
+    margin-bottom: 8px;
+    cursor: pointer;
+    strong{
+      color: $color-secondary;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
