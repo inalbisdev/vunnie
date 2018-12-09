@@ -19,7 +19,12 @@
                         </g>
                     </svg>
                 </div>
-                <input id="searchBox" data-validation="string" required="true" class="a-input-placeholder search-field" type="text"
+                <input id="searchBox"
+                       data-validation="string"
+                       required="true"
+                       class="a-input-placeholder search-field"
+                       type="text"
+                       data-error="Seleccione un destino"
                        placeholder="¿Adónde vas?"/>
                 <ul id="searchResults" class="term-list u-hidden"></ul>
             </div>
@@ -99,7 +104,9 @@
                         <label for="adults">Adultos</label>
 
                         <div class="popover-controllers">
-                            <input class="form-control" id="adults" name="adults" type="number" data-validation="number" readonly
+                            <input class="form-control" id="adults" name="adults" type="number"
+                                   data-error="Número incorrecto"
+                                   data-validation="number" readonly
                                    value="1"
                                    step="1"
                                    max="9"
@@ -134,7 +141,9 @@
 
 
                         <div class="popover-controllers">
-                        <input class="form-control" id="children" name="children" type="number" data-validation="number"
+                        <input class="form-control" id="children" name="children" type="number"
+                               data-error="Número incorrecto"
+                               data-validation="number"
                                value="0"
                                step="1"
                                max="9"
@@ -169,7 +178,9 @@
 
 
                         <div class="popover-controllers">
-                            <input class="form-control" id="babies" name="babies" type="number" data-validation="number"
+                            <input class="form-control" id="babies" name="babies" type="number"
+                                   data-error="Número incorrecto"
+                                   data-validation="number"
                                    value="0"
                                    step="1"
                                    max="9"

@@ -1,3 +1,4 @@
+//TODO: Rename to validationController.js
 var $ = require('jquery');
 var _ = require('lodash');
 require('bootstrap-daterangepicker');
@@ -22,7 +23,8 @@ module.exports = {
         },
         activeState: 'is-active',
         errorState: 'is-error',
-        successState: 'is-success'
+        successState: 'is-success',
+        messageDiv: '.message_div'
     },
     validations: require('../ui/validation'),
     openLodging: function () {
@@ -42,15 +44,23 @@ module.exports = {
             $element.removeClass(that.locators.errorState);
         });
     },
+    removeAllMessageStatus: function () {
+        $(this.locators.messageDiv).remove();
+    },
+    createMessageStatus: function (message) {
+        return $('<div/>', {
+            class: this.locators.messageDiv,
+            html: message
+        });
+    },
     validateForm: function (locatorForm, locatorField) {
         var that = this;
         this.resetStates(locatorField);
-        console.log('entra');
+        that.removeAllMessageStatus();
         _.forEach($(locatorForm + ' input'), function (input) {
-            console.log(input);
             var $input = $(input),
-                $parent = $input.closest(locatorField);
-            console.log($parent.length);
+                $parent = $input.closest(locatorField),
+                error = $input.data('error');
             if (that.validations.run($input)) {
                 if (!$parent.hasClass(that.locators.errorState)) {
                     $parent.addClass(that.locators.successState);
@@ -59,6 +69,7 @@ module.exports = {
                 }
             } else {
                 $parent.addClass(that.locators.errorState);
+                $parent.append(that.createMessageStatus(error ? error : 'Error de validación'));
             }
         });
     },
@@ -67,8 +78,10 @@ module.exports = {
             adults = $container.find('#adults').val(),
             children = $container.find('#children').val(),
             babies = $container.find('#babies').val();
-        this.validateForm(this);
         $(this.locators.searcher.lodging).text('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
+
+        this.validateForm(this.locators.searcher.form, this.locators.searcher.field);
+
 
     },
     isInputLodging: function ($target) {
@@ -79,7 +92,7 @@ module.exports = {
     },
     bindLodging: function () {
         var that = this;
-        $(this.locators.lodgingContent + ' input[type="number"]').on('change', $.proxy(this.onChangeNumber, this));
+        $(this.locators.searcher.lodgingContent + ' input[type="number"]').on('change', $.proxy(this.onChangeNumber, this));
         $(document).on('click', function (e) {
             var $target = $(e.target);
             if (that.isLodgingContent($target)) {

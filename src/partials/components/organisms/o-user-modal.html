@@ -50,12 +50,12 @@
             <div class="o-user-modal__content">
                 <form method="post" name="register" onsubmit="return false">
                     <div class="m-field">
-                        <input data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
+                        <input data-error="Introduzca un email válido" data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
                                required name="emailReg" id="emailReg"/>
                         <label class="m-field__label" for="emailReg">Email</label>
                     </div>
                     <div class="m-field">
-                        <input required data-validation="password" class="a-input" type="password" placeholder="Introduce tu password"
+                        <input data-error="Introduzca un password válido" required data-validation="password" class="a-input" type="password" placeholder="Introduce tu password"
                                name="passwordReg" id="passwordReg"/>
                         <label class="m-field__label" for="passwordReg">Password</label>
                     </div>
@@ -84,7 +84,7 @@
             <div class="o-user-modal__content">
                 <form method="post" name="recover" onsubmit="return false">
                     <div class="m-field">
-                        <input data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
+                        <input data-error="Introduzca un email válido" data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
                                name="emailRecover" id="emailRecover" required/>
                         <label class="m-field__label" for="emailRecover">Email</label>
                     </div>
