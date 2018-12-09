@@ -45,7 +45,7 @@ module.exports = {
         });
     },
     removeAllMessageStatus: function () {
-        $(this.locators.messageDiv).remove();
+        $('.' + this.locators.messageDiv).remove();
     },
     createMessageStatus: function (message) {
         return $('<div/>', {
@@ -79,10 +79,6 @@ module.exports = {
             children = $container.find('#children').val(),
             babies = $container.find('#babies').val();
         $(this.locators.searcher.lodging).text('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
-
-        this.validateForm(this.locators.searcher.form, this.locators.searcher.field);
-
-
     },
     isInputLodging: function ($target) {
         return $target.closest(this.locators.searcher.lodgingContainer).length > 0;
