@@ -78,7 +78,7 @@ module.exports = {
             adults = $container.find('#adults').val(),
             children = $container.find('#children').val(),
             babies = $container.find('#babies').val();
-        $(this.locators.searcher.lodging).text('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
+        $(this.locators.searcher.lodging).val('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
     },
     isInputLodging: function ($target) {
         return $target.closest(this.locators.searcher.lodgingContainer).length > 0;

@@ -1,5 +1,5 @@
 module.exports = {
-    searchIndex: ['Madrid', 'Barcelona', 'Paris', 'Bilbao'],
+    searchIndex: ['Madrid', 'Barcelona', 'Paris', 'Londres', 'Nueva York', 'San Francisco'],
     locators: {
         input: "searchBox",
         ul: "searchResults"
