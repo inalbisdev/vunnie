@@ -42,6 +42,10 @@
     line-height: 32px;
     color: #fff;
     font-family: $font-medium;
+    @media (max-width: 767px){
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
   &__searcher{
     margin-top: 26px;

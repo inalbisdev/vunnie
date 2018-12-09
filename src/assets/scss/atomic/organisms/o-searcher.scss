@@ -29,6 +29,9 @@
       margin-bottom: 4px;
     }
     &--destination {
+      input{
+        text-transform: capitalize;
+      }
       @media (min-width: 768px) {
         flex: 1;
       }
