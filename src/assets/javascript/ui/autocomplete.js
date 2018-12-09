@@ -15,7 +15,7 @@ module.exports = {
     search: function () {
         this.model.inputTerms = document.getElementById(this.locators.input).value.toLowerCase();
         this.model.results = [];
-        this.model.termsArray = this.model.inputTerms.split(' ');
+        this.model.termsArray = [this.model.inputTerms];
         this.model.prefix = this.model.termsArray.length === 1 ? '' : this.model.termsArray.slice(0, -1).join(' ') + ' ';
         this.model.terms = this.model.termsArray[this.model.termsArray.length - 1].toLowerCase();
 
@@ -61,7 +61,7 @@ module.exports = {
     appendResults: function () {
         this.clearResults();
         var autocompleteList = document.getElementById(this.locators.ul);
-        for (var i = 0; i < this.model.sortedResults.length && i < 5; i++) {
+        for (var i = 0; i < this.model.sortedResults.length && i < 10; i++) {
             var li = document.createElement("li"),
                 result = this.model.prefix
                     + this.model.sortedResults[i].toLowerCase().replace(this.model.terms, '<strong>'
