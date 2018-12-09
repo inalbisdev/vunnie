@@ -1,6 +1,5 @@
 let $ = require('jquery');
 module.exports = {
-
     locators: {
         $form: ".o-contact-form",
         $name: "#name",
