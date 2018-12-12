@@ -18,7 +18,9 @@ module.exports = {
         },
 
         modal: {
-            form: '.o-modal form',
+            register: '.o-user-modal__form--register form',
+            login: '.o-user-modal__form--login form',
+            recovery: '.o-user-modal__form--recover form',
             field: '.m-field'
         },
         activeState: 'is-active',
@@ -101,7 +103,7 @@ module.exports = {
             that.closeLodging();
         });
 
-        $('.o-searcher__popover--apply a').on('click',function (e) {
+        $('.o-searcher__popover--apply a').on('click', function (e) {
             e.preventDefault();
             that.closeLodging();
         })
@@ -120,9 +122,23 @@ module.exports = {
     ,
     bindModals: function () {
         var that = this;
-        $(document).on('click', that.locators.modal.form, function () {
-            that.validateForm(that.locators.modal.form, that.locators.modal.field);
-        })
+        $(document).on('click', that.locators.modal.register + ' input[type="submit"]', function () {
+            console.log('register');
+            that.validateForm(that.locators.modal.register, that.locators.modal.field);
+        });
+
+        $(document).on('click', that.locators.modal.recovery + ' input[type="submit"]', function () {
+            console.log('recovery');
+
+            that.validateForm(that.locators.modal.recovery, that.locators.modal.field);
+        });
+
+        $(document).on('click', that.locators.modal.login + ' input[type="submit"]', function () {
+            console.log('login');
+            that.validateForm(that.locators.modal.login, that.locators.modal.field);
+        });
+        '.o-user-modal__form--register'
+
     },
     bindEvents: function () {
         this.bindLodging();

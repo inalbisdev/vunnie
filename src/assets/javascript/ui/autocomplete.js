@@ -29,7 +29,6 @@ module.exports = {
         }
         this.evaluateResults();
     },
-
     evaluateResults: function () {
         if (this.model.results.length > 0
             && this.model.inputTerms.length > 0
@@ -41,7 +40,6 @@ module.exports = {
             document.getElementById(this.locators.ul).innerHTML = '<li style="pointer-events: none;"> No hay coincidencias con:'
                 + this.model.inputTerms
                 + ' </li>';
-
         }
         else if (this.model.inputTerms.length !== 0
             && this.model.terms.length === 0) {
@@ -85,7 +83,11 @@ module.exports = {
 
     bindClick: function () {
         $("#searchResults").on('click', 'li', function () {
-            $("#searchBox").val($(this).text());
+            var result = $(this).text();
+            if (result) {
+                result = result.charAt(0).toUpperCase() + result.slice(1)
+            }
+            $("#searchBox").val(result);
             $("#searchResults").addClass('u-hidden')
         })
     },
