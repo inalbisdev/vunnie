@@ -1,0 +1,101 @@
+.daterangepicker{
+  td{
+    &.off{
+      pointer-events: none;
+      opacity: 0;
+    }
+    &.active{
+      &.end-date,
+      &.start-date{
+        background: none;
+      }
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: $color-primary;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+    }
+    &.available{
+      &:hover{
+        background: none;
+        position: relative;
+        color: #fff;
+        z-index: 1;
+        &::before{
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 32px;
+          height: 32px;
+          left: 0;
+          right: 0;
+          z-index: -1;
+          background: $color-primary;
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+        &:not(.start-date){
+          &::after{
+            content: "";
+            position: absolute;
+            background: rgba(115, 19, 254, 0.2);
+            width: 16px;
+            height: 100%;
+            right: 16px;
+            top: 0;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.daterangepicker td{
+
+  &.active.start-date{
+    & + td{
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        background: rgba(115, 19, 254, 0.2);
+        width: 16px;
+        height: 100%;
+        left: -16px;
+        top: 0;
+      }
+    }
+  }
+  &.in-range{
+    & + .end-date{
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        background: rgba(115, 19, 254, 0.2);
+        width: 16px;
+        height: 100%;
+        right: 16px;
+        top: 0;
+        z-index: -1;
+        @media (max-width: 563px){
+          width: 21px;
+        }
+      }
+    }
+  }
+}

@@ -3,27 +3,41 @@
          data-slick='{"items": 1,"arrows": false,"draggable": true,"infinite": false,"fade":true,"adaptiveHeight": true}'>
         <div class="o-user-modal__form o-user-modal__form--login">
             <div class="o-user-modal__heading">
-                <div class="o-user-modal__logo">
-                    {{> a-logo}}
-                </div>
-                <div class="o-user-modal__title">Iniciar sesión</div>
-                <div class="o-user-modal__text">Si ya eres usuario introduce tu correo electrónico y
-                    contraseña.
-                </div>
+                <div class="o-user-modal__title">Bienvenido de nuevo a Vunnie</div>
             </div>
+
             <div class="o-user-modal__content">
+                <div class="m-social-login">
+                    <a class="m-social-login__btn">
+                        <span class="m-social-login__icon a-icon a-icon-facebook"></span>
+                        Inicia sesión con Facebook
+                    </a>
+                    <a class="m-social-login__btn">
+                        <span class="m-social-login__icon a-icon a-icon-google"></span>
+                        Inicia sesión con Google
+                    </a>
+                </div>
+
+                <div class="m-login-spacer">
+                    <div class="m-login-spacer__text">
+                        <span>o inicia sesión con</span>
+                    </div>
+                </div>
                 <form method="post" name="login" onsubmit="return false">
-                    <div class="m-field">
+                    <div class="m-field m-field--has-icon">
+                        <label class="m-field__label" for="emailLog">Dirección de email</label>
                         <input required class="a-input" type="email" placeholder="Introduce tu email"
                                name="emailLog" id="emailLog"/>
-                        <label class="m-field__label" for="emailLog">Email</label>
+                        <div class="m-field__icon a-icon a-icon-email"></div>
                     </div>
-                    <div class="m-field">
+                    <div class="m-field m-field--has-icon">
+                        <label class="m-field__label" for="passwordLog">Contraseña</label>
                         <input required class="a-input" type="password" placeholder="Introduce tu password"
                                name="passwordLog" id="passwordLog"/>
-                        <label class="m-field__label" for="passwordLog">Password</label>
+
+                        <div class="m-field__icon a-icon a-icon-hide js-toggle-visibility" data-target="#passwordLog"></div>
                     </div>
-                    <input type="submit" class="a-button a-button--submit a-button--moskva" value="Iniciar Sesión" />
+                    <input type="submit" class="a-button a-button--submit a-button--moskva" value="Iniciar Sesión"/>
                 </form>
             </div>
             <div class="o-user-modal__footer">
@@ -36,25 +50,25 @@
         </div>
         <div class="o-user-modal__form o-user-modal__form--register">
             <div class="o-user-modal__heading">
-                <div class="o-user-modal__logo">
-                    {{> a-logo}}
-                </div>
                 <div class="o-user-modal__title">Registro de usuario</div>
-                <div class="o-user-modal__text">Si ya eres usuario introduce tu correo electrónico y
-                    contraseña.
-                </div>
             </div>
             <div class="o-user-modal__content">
                 <form method="post" name="register" onsubmit="return false">
-                    <div class="m-field">
-                        <input data-error="Introduzca un email válido" data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
+                    <div class="m-field m-field--has-icon">
+                        <label class="m-field__label" for="emailReg">Dirección de email</label>
+                        <input data-error="Introduzca un email válido" data-validation="email" class="a-input"
+                               type="email" placeholder="Introduce tu email"
                                required name="emailReg" id="emailReg"/>
-                        <label class="m-field__label" for="emailReg">Email</label>
+                        <div class="m-field__icon a-icon a-icon-email"></div>
+
                     </div>
-                    <div class="m-field">
-                        <input data-error="Introduzca un password válido" required data-validation="password" class="a-input" type="password" placeholder="Introduce tu password"
+                    <div class="m-field  m-field--has-icon">
+                        <label class="m-field__label" for="passwordReg">Contraseña</label>
+                        <input data-error="Introduzca un password válido" required data-validation="password"
+                               class="a-input" type="password" placeholder="Introduce tu password"
                                name="passwordReg" id="passwordReg"/>
-                        <label class="m-field__label" for="passwordReg">Password</label>
+                        <div class="m-field__icon a-icon a-icon-hide js-toggle-visibility" data-target="#passwordLog"></div>
+
                     </div>
                     <input type="submit" class="a-button a-button--submit a-button--moskva" value="Continuar"/>
                 </form>
@@ -67,20 +81,16 @@
         <!-- Añadir segundo paso de la validacion -->
         <div class="o-user-modal__form o-user-modal__form--recover">
             <div class="o-user-modal__heading">
-                <div class="o-user-modal__logo">
-                    {{> a-logo}}
-                </div>
                 <div class="o-user-modal__title">Recuperar contraseña</div>
-                <div class="o-user-modal__text">
-                    Si ya eres usuario introduce tu correo electrónico y te enviaremos la contraseña a tu email.
-                </div>
             </div>
             <div class="o-user-modal__content">
                 <form method="post" name="recover" onsubmit="return false">
-                    <div class="m-field">
-                        <input data-error="Introduzca un email válido" data-validation="email" class="a-input" type="email" placeholder="Introduce tu email"
+                    <div class="m-field m-field--has-icon">
+                        <label class="m-field__label" for="emailRecover">Dirección de email</label>
+                        <input data-error="Introduzca un email válido" data-validation="email" class="a-input"
+                               type="email" placeholder="Introduce tu email"
                                name="emailRecover" id="emailRecover" required/>
-                        <label class="m-field__label" for="emailRecover">Email</label>
+                        <div class="m-field__icon a-icon a-icon-email"></div>
                     </div>
                     <input type="submit" class="a-button a-button--submit a-button--moskva" value="Enviar"/>
                 </form>

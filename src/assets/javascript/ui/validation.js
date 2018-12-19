@@ -114,6 +114,7 @@ module.exports = {
                 $this.addClass('error');
                 $this.parents('.m-field').append('<span class="m-field__error">Introduce un email por favor</span>');
             }
+
             if (inputName === "email" && $this.val() !== '') {
                 if (!that.validateEmail($this.val())) {
                     valid = false;

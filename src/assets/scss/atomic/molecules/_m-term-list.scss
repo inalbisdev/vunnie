@@ -8,8 +8,8 @@
   padding: 15px;
   border: 1px solid #ddd;
   z-index: 1;
-  &:before,
-  &:after{
+  &::before,
+  &::after{
     position: absolute;
     display: inline-block;
     border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -20,13 +20,13 @@
     width: 10px;
 
   }
-  &:before{
+  &::before{
     top: -7px;
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
     border-bottom: 7px solid #ccc;
   }
-  &:after{
+  &::after{
     top: -6px;
     border-right: 6px solid transparent;
     border-bottom: 6px solid #fff;

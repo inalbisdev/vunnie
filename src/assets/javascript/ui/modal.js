@@ -60,6 +60,8 @@ module.exports = {
             }
         });
 
+
+
         $(this.locators.$closeModal).on('click',function () {
             that.closeModal();
         });

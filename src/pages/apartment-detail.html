@@ -2,15 +2,17 @@
 layout: default
 title: Vunnie | Apartment Detail
 page: detail
-header: inv
 ---
 
-<section class="o-hero-slider js-slick js-slick-light-box slick-center-arrows" data-options="{'items' : 1,'arrow': true}">
+<section class="o-hero-slider js-slick js-slick-light-box slick-big-arrows slick-center-arrows"
+         data-slick='{"items" : 1,"arrow": true,"responsive": [{"breakpoint":480,"settings":{"arrows": false}}]}'>
     <a href="{{root}}assets/media/images/detail/apartment-detail-1.jpg" class="o-hero-slider__media">
-        <img class="lazyload" data-src="{{root}}assets/media/images/detail/apartment-detail-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+        <img class="lazyload" data-src="{{root}}assets/media/images/detail/apartment-detail-1.jpg"
+             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
     </a>
     <a href="{{root}}assets/media/images/detail/apartment-detail-2.jpg" class="o-hero-slider__media">
-        <img class="lazyload" data-src="{{root}}assets/media/images/detail/apartment-detail-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+        <img class="lazyload" data-src="{{root}}assets/media/images/detail/apartment-detail-2.jpg"
+             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
     </a>
 </section>
 
@@ -27,9 +29,7 @@ header: inv
                         Apartamento · Barcelona
                     </span>
                         <h3 class="m-card__title a-typo-bold">
-                            <a href="apartment-list.html">
-                                Apartamento en el centro de la ciudad de Barcelona
-                            </a>
+                            Apartamento en el centro de la ciudad de Barcelona
                         </h3>
                         <span class="m-card__conditions u-mb-8">
                         59€ por noche · Cancelación Estricta
@@ -57,10 +57,13 @@ header: inv
             <div class="o-apartment-detail__map">
                 <h3 class="a-typo-edison a-typo-bold u-mb-12">Mapa del alojamiento</h3>
                 <p class="a-color-grey">
-                    Este mapa ubica el alojamiento en un radio de 500 metros. Podrás ver la direccion exacta una vez hayas completado tu reserva.
+                    Este mapa ubica el alojamiento en un radio de 500 metros. Podrás ver la direccion exacta una vez
+                    hayas completado tu reserva.
                 </p>
                 <div id="map" class="u-mt-24">
-                    <iframe width="100%" height="200" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=Les%20Rambles%2C%201%20Barcelona%2C%20Spain+(Mi%20nombre%20de%20egocios)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe width="100%" height="200"
+                            src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=Les%20Rambles%2C%201%20Barcelona%2C%20Spain+(Mi%20nombre%20de%20egocios)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
             </div>
 
@@ -71,7 +74,6 @@ header: inv
                     You can cancel up to 5 days before arrival and receive a full refund (except the service fee).
                 </p>
             </div>
-
 
 
         </div>

@@ -1,10 +1,19 @@
 <article class="m-card">
-    {{#each this.attr.[0].media}}
-        <a class="m-card__media-url" href="{{../url}}">
-        {{> a-picture this}}
-        </a>
-    {{/each}}
-    <div class="m-card__content">
+
+    <div class="m-card__slider">
+        <a class="m-card__slider-url" href="{{url}}"></a>
+        <div class="js-slick slick-absolute-dots"
+             data-slick='{"items" : 1,"arrow": true,"responsive": [{"breakpoint":480,"settings":{"arrows": false,"dots":true}}]}'>
+            {{#each this.attr.[0].media}}
+                {{#repeat 2}}
+                    {{> a-picture this}}
+                {{/repeat}}
+            {{/each}}
+        </div>
+    </div>
+
+
+    <a class="m-card__content" href="{{url}}">
         {{#if this.attr.[0].place}}
             <span class="m-card__place a-typo-medium a-color-secondary a-typo-einstein u-uppercase">
                 {{this.attr.[0].place}}
@@ -12,15 +21,16 @@
         {{/if}}
         {{#if this.attr.[0].title}}
             <h3 class="m-card__title a-typo-bold">
-                <a href="{{url}}">
-                    {{this.attr.[0].title}}
-                </a>
+
+                {{this.attr.[0].title}}
+
             </h3>
         {{/if}}
         {{#if this.attr.[0].conditions}}
             <span class="m-card__conditions a-typo-einstein">
-            {{this.attr.[0].conditions}}
-        </span>
+                {{this.attr.[0].conditions}}
+            </span>
         {{/if}}
-    </div>
+    </a>
+
 </article>

@@ -1,12 +1,14 @@
 <header class="o-header">
+
     <!-- Logo -->
-
-    <a href="./{{root}}" class="o-header__logo">
-
-            {{> a-logo}}
-
-
+    <a href="./{{root}}" class="o-header__logo o-header__logo--desktop">
+        {{> a-logo}}
     </a>
+    <a class="o-header__logo o-header__logo--mobile js-toggle" data-toggle="body" data-toggle-class="menu-is-open">
+        {{> a-logo-simple}}
+        <div class="o-header__logo-icon a-icon a-icon-chevron-down"></div>
+    </a>
+
 
     <!--  Desktop Navigation -->
     <nav class="o-header__nav">
@@ -22,10 +24,7 @@
             </li>
         </ul>
     </nav>
-    <!-- Mobile Ham -->
-    <div class="o-header__ham">
-        {{> a-ham toggle="body" toggle-class="menu-is-open"}}
-    </div>
+
     <!-- Mobile Navigation -->
     <div class="o-header__nav o-header__nav--mobile">
         {{> o-nav-mobile}}

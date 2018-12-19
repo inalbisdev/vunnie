@@ -17,6 +17,7 @@
     align-items: flex-start;
     @media (max-width: 1200px){
       width: 100%;
+      justify-content: center;
       margin-bottom: 20px;
     }
 
@@ -41,11 +42,17 @@
     padding-right: 20px;
     @media (max-width: 767px){
       width: 50%;
-      padding-right: 0;
+      //padding-right: 0;
       padding-bottom: 20px;
     }
     @media (max-width: 480px){
+      padding-right: 10px;
+      //width: 100%;
+    }
+    @media (max-width: 360px){
       width: 100%;
+      padding-right: 0;
+      padding-bottom: 20px;
     }
     &:last-child{
       padding-right: 0;
@@ -57,7 +64,7 @@
 
   &__title{
     font-size: 16px;
-    color: #000;
+    color: #50585D;
     font-family: $font-bold;
     line-height: 19px;
   }
@@ -112,11 +119,9 @@
   }
 
   .a-separator{
-    background-color: $color-secondary;
-    height: 3px;
+    height: 1px;
     margin-bottom: 20px;
     width: 100%;
-
   }
 
   &__copy{
@@ -126,7 +131,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      color: $color-secondary;
+      color: #9B9B9B;
     }
     &-text{
       font-family: $font-bold;

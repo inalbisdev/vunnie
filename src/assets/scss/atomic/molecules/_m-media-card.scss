@@ -17,12 +17,6 @@
   }
   &__media{
     @include aspectRatio(175,215);
-    @media (max-width: 480px){
-      &:before{
-        padding-top: 70%;
-      }
-    }
-    //width: 175px;
     img{
       transition: .4s transform;
     }

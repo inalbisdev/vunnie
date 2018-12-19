@@ -12,23 +12,40 @@
   top: 0;
   left: 0;
   border-bottom: 1px solid #979797;
-
-
-
   @media (max-width: 1023px){
+    height: 75px;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
   }
   @media (max-width: 480px){
-    padding: 0 15px;
+    padding: 15px;
+    align-items: flex-start;
   }
 
   &__logo{
     display: block;
     line-height: 0;
-    .a-logo__letter{
-      @media (max-width: 480px){
+    position: relative;
+    cursor: pointer;
+    &-icon{
+      position: absolute;
+      bottom : -20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      font-weight: 700;
+      color: #333;
+      transition: .3s transform;
+      will-change: transform;
+    }
+    &--desktop{
+      @media (max-width: 1023px){
+        display: none;
+      }
+    }
+    &--mobile{
+      @media (min-width: 1024px){
         display: none;
       }
     }
@@ -91,7 +108,7 @@
     }
     &--mobile {
       position: fixed;
-      top: 60px;
+      top: 75px;
       width: 100%;
       left: 0;
       height: 100%;
@@ -145,5 +162,9 @@
   top: 0;
   width: 100%;
   //position: fixed;
+  .o-header__logo-icon{
+    transform: rotate(-90deg);
+    bottom: 0;
+  }
 }
 

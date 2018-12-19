@@ -1,17 +1,17 @@
-.slick{
+.slick {
   /*Graceful load for slider*/
-  &-slider{
+  &-slider {
     opacity: 0;
     transition: .6s opacity;
     height: 100%;
-    &:not(.slick-initialized){
+    &:not(.slick-initialized) {
       display: flex;
     }
-    &.slick-initialized{
+    &.slick-initialized {
       opacity: 1;
     }
   }
-  &-arrow{
+  &-arrow {
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -23,66 +23,64 @@
     border: none;
     color: transparent;
     outline: none;
-    &::before{
-      border: solid #fff;
-      border-width: 0 3px 3px 0;
-      display: inline-block;
-      padding: 3px;
-      z-index: 1;
-      width: 32px;
-      height: 32px;
-      transition: .4s border-color;
-      content: "";
+    &::before {
+      font-family: $icons-font-family;
+      color: #333;
+    }
+    &:hover {
+      &::before {
+        color: $color-secondary;
+      }
     }
     &.slick-prev,
-    &--left{
-      &::before{
-        transform: rotate(135deg);
+    &--left {
+      &::before {
+        content: "\e91f";
       }
       left: 30px;
 
     }
     &.slick-next,
-    &--right{
+    &--right {
 
       right: 30px;
-      &::before{
-        transform: rotate(-45deg);
+      &::before {
+        content: "\e925";
       }
     }
-    &:hover{
-      &::before{
+    &:hover {
+      &::before {
         border-color: $color-secondary;
       }
     }
   }
 
-  &-absolute-dots{
-    .slick-dots{
+  &-absolute-dots {
+    .slick-dots {
       position: absolute;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 1;
       flex-direction: row;
-      bottom : -30px;
+      bottom: -30px;
       left: 0;
       right: 0;
-      @media (max-width: 480px){
+      @media (max-width: 480px) {
 
       }
-      li{
+      li {
         margin-right: 4px;
         cursor: pointer;
-        &:last-child{
+        &:last-child {
           margin-right: 0;
         }
-        &.slick-active{
-          button{
+        &.slick-active {
+          button {
             background: $color-primary;
           }
         }
-        button{
+        button {
           transition: .4s transform;
           cursor: pointer;
           outline: none;
@@ -99,26 +97,85 @@
     }
   }
 
-  &-center-arrows{
-    .slick-arrow{
-      &--right{}
+  &-center-arrows {
+    .slick-arrow {
+      &--right {
+      }
     }
   }
 
-  &-right-stage-padding{
+  &-right-stage-padding {
     margin-right: -5vw;
-    .slick-slide{
+    .slick-slide {
       margin: 0 32px 0 0;
     }
-    .slick-list{
+    .slick-list {
       padding-left: 0 !important;
     }
   }
 
   /*Arrow Refactor*/
-  &-arrow{
+  &-arrow {
     cursor: pointer;
   }
+  /*Añadir redondeado a las flechas*/
+  &-rounded-arrows {
+    .slick {
+      &-arrow {
+        text-align: center;
+        line-height: 1;
+        touch-action: manipulation;
+        box-shadow: rgba(0, 0, 0, 0.14) 0 1px 1px 1px !important;
+        border-radius: 50% !important;
+        border-width: 2px !important;
+        border-style: solid !important;
+        border-color: transparent !important;
+        background: rgb(255, 255, 255) !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        &::before {
+          font-family: $icons-font-family;
+        }
+        &--left {
+          left: -10px;
+          &::before {
+            content: "\e91f";
+          }
+        }
+        &--right {
+          right: -10px;
+          &::before {
+            content: "\e925";
+          }
+        }
+        &:hover {
+          &::before {
+            border-color: $color-secondary
+          }
+        }
+      }
+    }
+  }
 
+  &-lightbox-slick,
+  &-big-arrows {
+    .slick {
+      &-arrow {
+        &::before {
+          font-size: 46px;
+          color: #fff;
+        }
+        &:hover {
+          &::before {
+            color: $color-secondary;
+          }
+        }
+      }
+
+    }
+  }
 
 }

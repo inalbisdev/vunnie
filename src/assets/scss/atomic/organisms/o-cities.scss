@@ -3,7 +3,17 @@
   width: 100%;
   margin-bottom: 60px;
   @media (min-width: 481px){
-    margin-left: -16px;
+
+  }
+  .slick-slide{
+    padding: 0 8px;
+  }
+  &__item{
+
+  }
+  .m-media-card{
+
+    margin: 0;
   }
   .slick-list{
     @media (max-width: 480px){
@@ -12,7 +22,7 @@
   }
   .slick-slide{
     @media (max-width: 480px){
-      margin-right: 16px;
+      //margin-right: 16px;
     }
   }
 }

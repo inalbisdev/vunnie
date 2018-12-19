@@ -9,9 +9,11 @@
     margin-bottom: 20px;
   }
   &__title{
-    font-size: 18px;
+    font-size: 25px;
+    line-height: 32px;
     font-family: $font-bold;
-    margin-bottom: 4px;
+    margin-bottom: 30px;
+    text-align: center;
   }
   &__text{
 
@@ -20,8 +22,8 @@
   .a-button{
     &--submit{
       display: block;
-      margin: 30px auto 0;
-      width: 60%;
+      margin: 25px auto 0;
+      width: 100%;
     }
   }
 

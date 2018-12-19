@@ -2,7 +2,8 @@ module.exports = {
 
     locators: {
         $slider: '#userModalSlider',
-        $stepLinks: '[data-step]'
+        $stepLinks: '[data-step]',
+        $togglePasswordVisibility: ".js-toggle-visibility"
     },
 
 
@@ -20,6 +21,24 @@ module.exports = {
         $(this.locators.$stepLinks).removeClass('is-active');
     },
 
+
+
+    changeInputType : function($el){
+        let target = $el.data('target'),
+            inputType = $(target).prop('type');
+
+
+        $el.toggleClass('is-active');
+
+        if(inputType === "text"){
+            $(target).prop('type', 'password');
+        }else{
+            $(target).prop('type', 'text');
+        }
+
+    },
+
+
     bindEvents: function(){
 
 
@@ -33,6 +52,12 @@ module.exports = {
 
             that.goToStep($(this).data('step'));
 
+        });
+
+
+        $(this.locators.$togglePasswordVisibility).on('click',function (e) {
+            e.preventDefault();
+            that.changeInputType($(this));
         });
 
 

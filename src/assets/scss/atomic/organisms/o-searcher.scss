@@ -8,36 +8,50 @@
     transform: translateY(-50%);
     user-select: none;
     pointer-events: none;
-    left: 10px;
-    width: 20px;
-    height: 20px;
+    right: 15px;
+    transition: .3s transform;
+    will-change: transform;
+    .is-active & {
+      transform: translateY(-50%) rotate(180deg);
+    }
   }
   &__row {
     display: flex;
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       flex-wrap: wrap;
       flex-direction: column;
     }
   }
   &__field {
     position: relative;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       margin-right: 4px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       flex: 1;
       margin-bottom: 4px;
     }
+    input{
+
+      &::-webkit-input-placeholder {
+        font-family: $font-medium;
+        font-size: 16px;
+        line-height: 24px
+      }
+    }
     &--destination {
       input{
-        text-transform: capitalize;
+        &::-webkit-input-placeholder {
+          font-family: $font-bold;
+          font-size: 20px;
+        }
       }
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         flex: 1;
       }
     }
     &--lodging {
-      min-width: 205px;
+      min-width: 255px;
     }
     &--date {
       min-width: 215px;
@@ -147,32 +161,36 @@
 }
 
 .a-input-placeholder {
-  border: none;
   height: 45px;
   border-radius: 2px;
   background: #fff;
-  padding: 15px 15px 15px 40px;
+  padding: 5px 30px 5px 15px;
   width: 100%;
-  font-size: 12px;
-  font-family: $font-bold;
+  //font-size: 12px;
+  font-family: $font-medium;
   cursor: pointer;
-  .is-device &{
   font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #fff;
+  &:focus{
+    border: 1px solid $color-primary !important;
+  }
+  .is-device &{
+
   }
   &::-webkit-input-placeholder {
     color: #1e272e;
-    font-size: 12px;
-    font-family: $font-bold;
-    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $font-medium;
     opacity: 1;
     .is-device &{
-      font-size: 16px;
     }
   }
 }
 
 .o-fixed-searcher {
-  background-color: #F2F4F7;
+  background-color: #fff;
   padding: 20px 30px;
   position: sticky;
   top: 60px;
@@ -183,6 +201,11 @@
   .o-searcher {
     max-width: $l__container-max-width - 100;
     margin: 0 auto;
+    background: none;
+    .a-input-placeholder{
+      border-color: #B7B7B7;
+      border-radius: 4px;
+    }
 
   }
 }
@@ -213,10 +236,7 @@
     justify-content: center;
     cursor: pointer;
     transition: .3s background-color;
-    svg{
-      width: 12px;
-      height: 12px;
-    }
+    color: #fff;
     &:hover{
       background-color: $color-secondary;
     }
@@ -224,7 +244,7 @@
 }
 
 .field-error{
-  display: block;
+  position: absolute;
 }
 
 

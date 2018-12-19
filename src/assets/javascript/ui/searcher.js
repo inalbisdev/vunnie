@@ -16,7 +16,6 @@ module.exports = {
             lodgingContent: '.o-searcher__popover--lodging',
             dateContent: '.o-searcher__popover--dates'
         },
-
         modal: {
             form: '.o-modal form',
             field: '.m-field'
@@ -79,6 +78,7 @@ module.exports = {
             children = $container.find('#children').val(),
             babies = $container.find('#babies').val();
         $(this.locators.searcher.lodging).val('Adultos:' + adults + ' Niños:' + children + ' Bebés:' + babies);
+        //$(this.locators.searcher.lodging).val('Húespedes:' + (total));
     },
     isInputLodging: function ($target) {
         return $target.closest(this.locators.searcher.lodgingContainer).length > 0;
@@ -101,7 +101,7 @@ module.exports = {
             that.closeLodging();
         });
 
-        $('.o-searcher__popover--apply a').on('click',function (e) {
+        $('.o-searcher__popover--apply a').on('click', function (e) {
             e.preventDefault();
             that.closeLodging();
         })
@@ -116,22 +116,40 @@ module.exports = {
         $(this.locators.searcher.submit).on('click', function () {
             that.validateForm(that.locators.searcher.form, that.locators.searcher.field);
         });
-    }
-    ,
+    },
+
     bindModals: function () {
         var that = this;
         $(document).on('click', that.locators.modal.form, function () {
             that.validateForm(that.locators.modal.form, that.locators.modal.field);
         })
     },
+
+    removeActiveInputClass: function () {
+        $(".o-searcher__field").removeClass("is-active");
+    },
+
+    addActiveInputClass: function ($el) {
+        $el.parents(".o-searcher__field").addClass("is-active");
+    },
+
+    bindInputs: function () {
+        let that = this;
+        $(".o-searcher .a-input-placeholder").on("click", function () {
+            that.removeActiveInputClass();
+            that.addActiveInputClass($(this));
+        });
+    },
+
     bindEvents: function () {
         this.bindLodging();
         this.bindCalendar();
         this.bindSubmitSearcher();
         this.bindModals();
+        this.bindInputs();
     },
     initDate: function () {
-        var $datesInputs = $('input[name="dates"]')
+        var $datesInputs = $('input[name="dates"]');
         $datesInputs.daterangepicker({
             startDate: Date.now(),
             "autoApply": true,

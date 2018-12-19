@@ -10,8 +10,6 @@
     border-radius: $m-card__media-border-radius;
     overflow: hidden;
     position: relative;
-    margin-bottom: 16px;
-    //width: 225px;
     @include aspectRatio(225,175);
     img{
       display: block;
@@ -19,9 +17,47 @@
       object-fit: cover;
       border-radius: 2px;
     }
+
+  }
+  &__slider{
+    position: relative;
+    .slick-dots{
+      bottom: 10px;
+    }
+    .slick-arrow{
+      width: auto;
+      height: auto;
+      &--left{
+        left: 5px;
+      }
+      &--right{
+        right: 5px;
+      }
+      &::before{
+        color: #fff;
+        font-size: 20px;
+        transition: .3s color;
+      }
+      &:hover{
+        &::before{
+          color: $color-secondary;
+        }
+      }
+    }
     &-url{
       display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      cursor: pointer;
+
     }
+  }
+  &__content{
+    margin-top: 16px;
+    display: block;
+    text-decoration: none;
   }
   &__conditions{
     color: #50585D;
@@ -48,7 +84,6 @@
     font-style: normal;
   }
 
-  &__content{}
   &__actions{
     position: absolute;
     top: 0;
@@ -67,14 +102,8 @@
   &__title{
     margin-bottom: 4px;
     font-size: 16px;
-    a{
-      color: #121212;
-      text-decoration: none;
-      transition: .3s color;
-      &:hover{
-        color: $color-primary;
-      }
-    }
+    color: #121212;
+
   }
   &__subtitle{}
   &__text{

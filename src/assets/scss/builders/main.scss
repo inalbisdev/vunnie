@@ -15,26 +15,26 @@
 
 @font-face {
   font-family: 'Helvetica Thin';
-  font-display: fallback;
+  font-display: swap;
   src: local('Helvetica Thin'),
   url(../fonts/Helvetica_Thin.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Helvetica Regular';
-  font-display: fallback;
+  font-display: swap;
   src: local('Helvetica Regular'),
   url(../fonts/Helvetica_Regular.otf) format('opentype');
 }
 @font-face {
   font-family: 'Helvetica Medium';
-  font-display: fallback;
+  font-display: swap;
   src: local('Helvetica Medium'),
   url(../fonts/Helvetica_Medium.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Helvetica Bold';
-  font-display: fallback;
+  font-display: swap;
   src: local('Helvetica Bold'),
   url(../fonts/Helvetica_Bold.woff2) format('woff2');
 }
@@ -53,6 +53,7 @@
 @import "../vendors/slick-custom-theme";
 @import "../vendors/slick-lightbox";
 @import "../vendors/daterange";
+@import "../vendors/daterange-custom";
 
 
 

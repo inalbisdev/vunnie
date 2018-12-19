@@ -33,12 +33,15 @@
     }
 
   }
-
-
-
   &-main{
     &__main{
-      padding-top: 60px; // Header height
+      // Header height
+      @media (max-width: 1023px){
+        padding-top: 75px;
+      }
+      @media (min-width: 1024px){
+        padding-top: 60px;
+      }
     }
   }
 }

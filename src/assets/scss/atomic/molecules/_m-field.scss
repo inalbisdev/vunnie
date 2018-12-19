@@ -1,18 +1,12 @@
 .m-field {
+  /*
   display: flex;
   flex-flow: column-reverse;
+  */
   position: relative;
   margin-bottom: 16px;
   &:last-child{
     margin-bottom: 0;
-  }
-  &::after {
-    content: "";
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: #D8D8D8;
   }
   &--no-border{
     &::after{
@@ -22,11 +16,12 @@
   }
 
   &__label {
-    font-size: 10px;
-    text-transform: uppercase;
-    line-height: 12px;
+    font-size: 16px;
+    line-height: 24px;
     pointer-events: none;
-    font-family: $font-bold;
+    font-family: $font-regular;
+    display: block;
+    margin-bottom: 8px;
     &-opt {
       color: #999;
       font-family: $font-regular;
@@ -75,6 +70,31 @@
       transform: rotate(-135deg);
       top: -2px;
       left: 4px;
+    }
+  }
+  &--has-icon{
+    input{
+      padding-right: 35px;
+    }
+  }
+  &__icon{
+    position: absolute;
+    top: calc(50% + 22px);
+    right: 10px;
+    color: #999;
+    transform: translateY(-80%);
+    font-size: 20px;
+    &.a-icon-email{
+      pointer-events: none;
+    }
+    &.a-icon-hide{
+      cursor: pointer;
+      &.is-active{
+        &::before{
+          content: "\e926";
+          font-family: $icons-font-family;
+        }
+      }
     }
   }
 }

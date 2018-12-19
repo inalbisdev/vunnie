@@ -1,10 +1,12 @@
 .o-hero{
   position: relative;
-
   margin-bottom: 50px;
   &__media{
     overflow: hidden;
     height: 470px;
+    @media (max-width: 1023px){
+      height: 320px;
+    }
     img{
       object-fit: cover;
       height: 100%;
@@ -13,18 +15,29 @@
     }
   }
   &__content{
-    position: absolute;
     max-width: $l__container-max-width;
     padding-left: $l__container-left-padding;
     padding-right: $l__container-right-padding;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    @media (max-width: 767px){
-      padding-left: $l-_container-left-padding / 2;
-      padding-right: $l-_container-right-padding / 2;
+    @media (min-width: 1024px){
+      position: absolute;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+    }
+    @media (max-width: 1023px){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &__intro{
+    @media (max-width: 1023px){
+      position: absolute;
+      top: calc(340px / 2);
+      z-index: 1;
+      padding: 0 20px;
+      left: 0;
     }
   }
   &__title{
@@ -32,9 +45,9 @@
     line-height: 36px;
     color: #fff;
     font-family: $font-bold;
-    @media (max-width: 767px){
-      font-size: 26px;
-      line-height: 32px;
+    @media (max-width: 1023px){
+      font-size: 24px;
+      line-height: 30px;
     }
   }
   &__claim{
@@ -42,13 +55,29 @@
     line-height: 32px;
     color: #fff;
     font-family: $font-medium;
-    @media (max-width: 767px){
-      font-size: 20px;
-      line-height: 26px;
+    @media (max-width: 1023px){
+      font-size: 16px;
+      line-height: 18px;
+      display: block;
+      max-width: 120px;
     }
   }
   &__searcher{
     margin-top: 26px;
+    @media (max-width: 1023px){
+      margin-top: 20px;
+      .o-searcher{
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        &__field{
+          margin-bottom: 16px;
+        }
+        .a-input-placeholder{
+          border: 1px solid #D8D8D8;
+        }
+      }
+    }
   }
 }
 

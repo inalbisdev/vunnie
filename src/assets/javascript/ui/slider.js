@@ -11,8 +11,8 @@ module.exports = {
 
     initSlider: function ($el) {
         $el.slick({
-            nextArrow: '<a class="slick-arrow slick-arrow--left"></a>',
-            prevArrow: '<a class="slick-arrow slick-arrow--right"></a>'
+            nextArrow: '<a class="slick-arrow slick-arrow--right"></a>',
+            prevArrow: '<a class="slick-arrow slick-arrow--left"></a>'
         });
 
         if($el.hasClass('js-slick-light-box')){

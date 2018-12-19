@@ -26,7 +26,7 @@ PATHS:
     - "src/sw.js"
   # Paths to static assets that aren't images, CSS, or JavaScript
   fonts:
-  - "src/assets/fonts/*"
+  - "src/assets/fonts/**/*"
   favicon:
   - "src/favicon.ico"
   assets:
