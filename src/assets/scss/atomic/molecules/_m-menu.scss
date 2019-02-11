@@ -1,0 +1,33 @@
+.m-menu{
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px;
+  min-width: 282px;
+  max-width: 950px;
+  min-height: 60px;
+  position: absolute;
+  right: 5px;
+  top: 60px;
+  border-width: 1px 1px 1px;
+  border-style: none solid solid;
+  border-color: rgb(235, 235, 235) rgb(235, 235, 235) rgb(235, 235, 235);
+  border-image: initial;
+  border-top: none;
+  &__inner{
+
+  }
+  &__item{
+    margin: 0 16px;
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+    border-color: rgb(242, 242, 242);
+    font-size: 14px;
+    font-family: $font-medium;
+    color: $color-black;
+    &:hover{
+      border-bottom: 1px solid rgb(118, 118, 118);
+      border-color: rgb(118, 118, 118);
+    }
+  }
+}

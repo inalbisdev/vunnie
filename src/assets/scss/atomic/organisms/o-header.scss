@@ -1,4 +1,3 @@
-
 .o-header {
   z-index: 103;
   height: 60px;
@@ -12,25 +11,25 @@
   top: 0;
   left: 0;
   border-bottom: 1px solid #979797;
-  @media (max-width: 1023px){
+  @media (max-width: 1023px) {
     height: 75px;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
   }
-  @media (max-width: 480px){
+  @media (max-width: 480px) {
     padding: 15px;
     align-items: flex-start;
   }
 
-  &__logo{
+  &__logo {
     display: block;
     line-height: 0;
     position: relative;
     cursor: pointer;
-    &-icon{
+    &-icon {
       position: absolute;
-      bottom : -20px;
+      bottom: -27px;
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -38,14 +37,16 @@
       color: #333;
       transition: .3s transform;
       will-change: transform;
+      width: 16px;
+      height: 16px;
     }
-    &--desktop{
-      @media (max-width: 1023px){
+    &--desktop {
+      @media (max-width: 1023px) {
         display: none;
       }
     }
-    &--mobile{
-      @media (min-width: 1024px){
+    &--mobile {
+      @media (min-width: 1024px) {
         display: none;
       }
     }
@@ -54,7 +55,7 @@
   &__nav {
     padding-left: 100px;
     @media (max-width: $screen-m-max) {
-      &:not(.o-header__nav--mobile){
+      &:not(.o-header__nav--mobile) {
         display: none;
       }
     }
@@ -69,8 +70,6 @@
       }
     }
 
-
-
     &-link {
       color: #000;
       text-decoration: none;
@@ -80,7 +79,7 @@
       transition: .3s color;
       position: relative;
       &::before,
-      &::after{
+      &::after {
         content: "";
         width: 0;
         position: absolute;
@@ -89,19 +88,19 @@
         bottom: -10px;
         transition: .3s width;
       }
-      &::before{
+      &::before {
         right: 0;
       }
-      &::after{
+      &::after {
         left: 0;
       }
-      &:hover{
+      &:hover {
         color: $color-secondary;
       }
-      &.is-active{
+      &.is-active {
         color: $color-secondary;
         &::before,
-        &::after{
+        &::after {
           width: 50%;
         }
       }
@@ -115,7 +114,7 @@
       overflow-y: auto;
       background-color: $color-black;
       transform: translateX(-100%);
-      transition: .6s transform,.6s opacity;
+      transition: .6s transform, .6s opacity;
       will-change: transform, opacity;
       padding: 0;
       opacity: 0;
@@ -137,34 +136,54 @@
 
   }
 
-
-  &--inv{
-    background: #F2F4F7;
-    .o-header__nav-link{
-      color: #000;
-      &.is-active{
-        &::before,
-        &::after{
-          background-color: #FF4343;
-        }
-      }
-      &:hover{
-        color: #FF4343;
-      }
-    }
-  }
-
 }
-.menu-is-open{
+
+.menu-is-open {
   overflow: hidden;
   left: 0;
   -webkit-overflow-scrolling: touch;
   top: 0;
   width: 100%;
   //position: fixed;
-  .o-header__logo-icon{
-    transform: rotate(-90deg);
-    bottom: 0;
+  .o-header__logo-icon {
+    transform: rotate(180deg);
+    bottom: -10px;
   }
 }
+
+/*Modificaciones para el header de la home*/
+@media (min-width: 1024px) {
+  .o-header--inv {
+    &:not(.is-fixed) {
+      border: none;
+      background: transparent;
+      .o-header__logo {
+        &-icon {
+          color: #fff;
+        }
+        path {
+          fill: #fff;
+        }
+      }
+      .o-header__nav-link {
+        color: #fff;
+        &.is-active {
+          color: $color-secondary;
+          &::before,
+          &::after {
+            background-color: $color-secondary;
+          }
+        }
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+
+    }
+    & + .l-main__main {
+      padding-top: 0;
+    }
+  }
+}
+
 

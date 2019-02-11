@@ -13,8 +13,6 @@ module.exports = {
     },
     smoothScroll: function (scrollTop, timing, target) {
 
-        console.log(scrollTop)
-
         timing = typeof timing !== 'undefined' ? timing : 500;
         scrollTop = scrollTop || 0;
         target = target || $('html,body');

@@ -1,4 +1,4 @@
-<header class="o-header">
+<header class="o-header {{#if header}}o-header--inv{{/if}}">
 
     <!-- Logo -->
     <a href="./{{root}}" class="o-header__logo o-header__logo--desktop">
@@ -9,10 +9,18 @@
         <div class="o-header__logo-icon a-icon a-icon-chevron-down"></div>
     </a>
 
-
     <!--  Desktop Navigation -->
     <nav class="o-header__nav">
         <ul>
+            <li class="o-header__nav-item">
+                <a target="_blank" href="#" class="o-header__nav-link">Mis alojamientos</a>
+            </li>
+            <li class="o-header__nav-item">
+                <a target="_blank" href="#" class="o-header__nav-link">Mensajes</a>
+            </li>
+            <li class="o-header__nav-item">
+                <a target="_blank" href="#" class="o-header__nav-link">Favoritos</a>
+            </li>
             <li class="o-header__nav-item">
                 <a target="_blank" href="#" class="o-header__nav-link">Ayuda</a>
             </li>
@@ -22,6 +30,33 @@
             <li class="o-header__nav-item">
                 <a href="{{root}}programa.html" data-step="0" class="o-header__nav-link js-modal" data-modal="#userModal">Iniciar sesión</a>
             </li>
+            <li class="o-header__nav-item o-header__nav-item--avatar">
+                <a href="#" class="a-avatar js-toggle" data-target="#menu" data-toggle-class="is-active">
+                    <img class="a-avatar__media" src="{{root}}assets/media/images/common/avatar.jpg"/>
+                </a>
+                <div class="m-menu" id="menu" style="display: none;">
+                    <div class="m-menu__inner">
+                        <a href="#" class="m-menu__item">
+                            Editar perfil
+                        </a>
+                        <a href="#" class="m-menu__item">
+                            Invita a tus amigos
+                        </a>
+                        <a href="#" class="m-menu__item">
+                            Invita a anfitriones
+                        </a>
+                        <a href="#" class="m-menu__item">
+                            Configuración de la cuenta
+                        </a>
+                        <a href="#" class="m-menu__item">
+                            Mi guía
+                        </a>
+                        <a href="#" class="m-menu__item">
+                            Cerrar sesión
+                        </a>
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
 
@@ -29,4 +64,5 @@
     <div class="o-header__nav o-header__nav--mobile">
         {{> o-nav-mobile}}
     </div>
+
 </header>

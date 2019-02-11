@@ -122,7 +122,8 @@ $icons: (
         "wifi": "\e923",
         "chevron-left": "\e91f",
         "chevron-right": "\e925",
-        "chevron-down": "\e925",
+        "chevron-down": "\e92a",
+        "chevron-down-bold": "\e929",
         "see" :"\e926",
         "hide": "\e91e",
         "add": "\e91c",
@@ -160,8 +161,8 @@ $a-button-line-height: 19px !default;
 $a-animation-ripple: true !default;
 
 /*Button Variations*/
-$a-button-paris-background: $color-primary !default;
-$a-button-paris-color: $color-white !default;
+$a-button-paris-background: $color-white !default;
+$a-button-paris-color: $color-black !default;
 
 $a-button-berlin-background: #fff !default;
 $a-button-berlin-color: #7313FE !default;

@@ -1,12 +1,16 @@
 <article class="m-card">
 
     <div class="m-card__slider">
+        <!--
         <a class="m-card__slider-url" href="{{url}}"></a>
+        -->
         <div class="js-slick slick-absolute-dots"
              data-slick='{"items" : 1,"arrow": true,"responsive": [{"breakpoint":480,"settings":{"arrows": false,"dots":true}}]}'>
             {{#each this.attr.[0].media}}
                 {{#repeat 2}}
-                    {{> a-picture this}}
+                    <a href="{{../url}}">
+                        {{> a-picture this}}
+                    </a>
                 {{/repeat}}
             {{/each}}
         </div>

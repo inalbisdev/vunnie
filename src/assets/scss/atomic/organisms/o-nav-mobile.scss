@@ -2,11 +2,11 @@
   padding: 40px 30px 40px;
   display: flex;
   flex-direction: column;
-  height: calc(100% - 60px);
+  height: calc(100% - 75px);
   overflow-y: auto;
   background: #F9F4FF;
   @media (max-width: 480px){
-      padding: 20px 15px 20px;
+      padding: 15px;
   }
 
   &__logo{
@@ -34,7 +34,7 @@
       margin-bottom: 30px;
       display: block;
       @media (max-width: 480px){
-        margin-top: 15px;
+        margin-top: 10px;
       }
       &:last-child{
         margin-bottom: 0;
@@ -81,6 +81,9 @@
     }
     .a-separator{
       margin: 35px 0;
+      @media (max-width: 480px){
+        margin: 20px 0;
+      }
     }
     &-link{
       font-size: 14px;

@@ -1,0 +1,2 @@
+- Home al 100% pero no el buscador
+- Boton con loading

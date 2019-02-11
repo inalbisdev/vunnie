@@ -12,7 +12,8 @@ module.exports = (function () {
         wizard: require('./ui/wizard'),
         searcher: require('./ui/searcher'),
         inputEnhanced: require('./ui/inputEnhanced'),
-        autocomplete: require('./ui/autocomplete')
+        autocomplete: require('./ui/autocomplete'),
+        header: require('./ui/fixedHeader')
     };
 })();
 

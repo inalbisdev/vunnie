@@ -3,7 +3,7 @@
   margin-bottom: 50px;
   &__media{
     overflow: hidden;
-    height: 470px;
+    height: 100vh;
     @media (max-width: 1023px){
       height: 320px;
     }
@@ -64,6 +64,42 @@
   }
   &__searcher{
     margin-top: 26px;
+
+    @media (min-width: 1024px){
+    /*Modificaciones para dejar como AirBnb*/
+    .o-searcher{
+      background: none;
+      padding: 0;
+      box-shadow: 0 10px 36px rgba(0,0,0,0.65) !important;
+      .a-input-placeholder {
+        height: 70px;
+        border-radius: 0;
+      }
+      &__field{
+        margin: 0;
+        border-right: 1px solid #ebebeb;
+        &:last-child{
+          border: none;
+        }
+        &--destination{
+          .a-input-placeholder{
+            border-radius: 5px 0 0 5px;
+          }
+        }
+        &--lodging{
+          border: none;
+          .a-input-placeholder{
+            border-radius: 0 5px 5px 0 !important;
+          }
+        }
+        &--button{
+          padding-left: 12px;
+        }
+      }
+
+    }
+    }
+
     @media (max-width: 1023px){
       margin-top: 20px;
       .o-searcher{

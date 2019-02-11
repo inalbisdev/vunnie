@@ -5,18 +5,22 @@ let utils = require('../app.utils');
 module.exports = {
 
     locators : {
-        $trigger: '.o-header',
-        fixedClass: 'is-fixed'
+        $trigger: ".o-header--inv",
+        fixedClass: "is-fixed",
+        $hero: ".o-hero"
+    },
+
+
+
+    isHeroOnViewport : function(el,tolerance){
+
+        return (utils.getOffsetBottom(el) - tolerance) > utils.viewPortTop() && utils.getOffsetTop(el) < utils.viewPortBottom();
     },
 
 
     toggleFixedHeader : function(){
-
-
-        let activeClass = window.pageYOffset > 0;
-
-        activeClass ? $(this.locators.$trigger).addClass(this.locators.fixedClass) : $(this.locators.$trigger).removeClass(this.locators.fixedClass);
-
+        let activeClass = this.isHeroOnViewport($(this.locators.$hero),$(this.locators.$trigger).innerHeight());
+        activeClass ? $(this.locators.$trigger).removeClass(this.locators.fixedClass) : $(this.locators.$trigger).addClass(this.locators.fixedClass);
     },
 
     bindEvents: function () {

@@ -1,0 +1,43 @@
+.m-navigation{
+  border-bottom: 1px solid #c6c6c6;
+  padding-bottom: 16px;
+  display: flex;
+  margin-bottom: 64px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  &__item{
+    text-decoration: none;
+    color: #121212;
+    margin-right: 32px;
+    position: relative;
+    display: inline-flex;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: .3s color;
+    &:hover{
+      color: $color-secondary;
+    }
+    &:last-child{
+      //margin: 0;
+    }
+    &.is-active{
+      font-family: $font-bold;
+      color: $color-secondary;
+      pointer-events: none;
+      order: -1;
+      &::after{
+        content: "";
+        background: $color-secondary;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        bottom: -17px;
+        left: 0;
+      }
+    }
+  }
+  &__link{
+
+  }
+}

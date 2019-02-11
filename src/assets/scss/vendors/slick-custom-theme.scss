@@ -78,19 +78,22 @@
         &.slick-active {
           button {
             background: $color-primary;
+            border-color: transparent;
           }
         }
         button {
+          //border: 1px solid rgba(255,255,255,.6);
+          border: none;
           transition: .4s transform;
           cursor: pointer;
           outline: none;
-          border: 1px solid $color-primary;
           background: #fff;
-          width: 16px;
-          height: 16px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
           text-indent: -9999px;
           padding: 0;
+          background: rgba($color-primary,.5);
 
         }
       }

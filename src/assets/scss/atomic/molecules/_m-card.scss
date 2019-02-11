@@ -22,7 +22,7 @@
   &__slider{
     position: relative;
     .slick-dots{
-      bottom: 10px;
+      bottom: -5px;
     }
     .slick-arrow{
       width: auto;
@@ -51,11 +51,13 @@
       height: 100%;
       z-index: 1;
       cursor: pointer;
-
+    }
+    a{
+      outline: none;
     }
   }
   &__content{
-    margin-top: 16px;
+    margin-top: 4px;
     display: block;
     text-decoration: none;
   }

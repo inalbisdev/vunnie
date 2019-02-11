@@ -8,10 +8,6 @@
   transition: .6s opacity;
   cursor: n-resize;
   font-family: $font-bold;
-
-  &:hover{
-
-  }
   &.is-active{
     pointer-events: all;
     opacity: 1;

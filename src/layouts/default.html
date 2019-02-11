@@ -3,7 +3,7 @@
 <head>
     {{> head}}
 </head>
-<body class="l-main">
+<body class="l-main {{#if full-width}}l-main--full{{/if}}">
     {{> header}}
     <main class="l-main__main">
         {{> body}}
@@ -13,10 +13,11 @@
             {{/inline}}
         {{/o-modal}}
     </main>
-    {{>a-scroll-top}}
+    {{> a-scroll-top}}
     {{> m-cookies}}
     {{> footer}}
     {{> scripts}}
 </body>
 </html>
+
 

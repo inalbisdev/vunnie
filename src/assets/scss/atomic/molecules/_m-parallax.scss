@@ -3,32 +3,33 @@
   display: block;
   overflow: hidden;
   border-radius: 4px;
-  &:after{
-    content: "";
-    position: absolute;
-    top: 0;
-    background: rgba(#000,.5);
-    width: 100%;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    transition: .4s opacity;
-    border-radius: 4px;
-  }
+
   &:hover{
     &:after{
       opacity: 1;
     }
-    .m-parallax__media img{
-      transform: scale(1.1);
+
+  }
+
+
+  &__logo{
+    margin-bottom: 32px;
+    svg{
+      width: 200px;
+      height: 50px;
     }
-    .m-parallax__subtitle,
-    .m-parallax__title{
-      color: $color-secondary;
+    path{
+      fill: #fff;
     }
   }
+
+  &__button{
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
   &__media{
-    height: 200px;
+    height: 300px;
     img{
       transition: .6s transform;
       height: 100%;

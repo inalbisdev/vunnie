@@ -3,7 +3,6 @@
 .l{
   max-width: 100%;
 
-
   &--has-bg{
     padding-top: 80px;
     padding-bottom: 80px;
@@ -34,6 +33,11 @@
 
   }
   &-main{
+    &--full{
+      .l--fit{
+        max-width: 100%;
+      }
+    }
     &__main{
       // Header height
       @media (max-width: 1023px){

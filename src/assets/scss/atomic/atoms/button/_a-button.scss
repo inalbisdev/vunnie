@@ -22,6 +22,15 @@
     font-size: 12px;
   }
 
+  &--has-icon{
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    .a-button__icon{
+      height: 28px;
+      font-size: 12px;
+    }
+  }
 
   &__icon{
     margin-left: 15px;
@@ -85,6 +94,13 @@
   &--paris{
     background: $a-button-paris-background;
     color: $a-button-paris-color;
+    padding: 6px 16px;
+    line-height: 32px;
+    box-shadow: 0 1px 3px 2px #666;
+    transition: .3s color;
+    &:hover{
+      color: $color-secondary;
+    }
   }
 
   &--fit{

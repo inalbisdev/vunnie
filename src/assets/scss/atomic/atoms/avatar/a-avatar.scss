@@ -1,0 +1,18 @@
+.a-avatar{
+  cursor: pointer;
+  &__media{
+    background-color: rgb(242, 242, 242);
+    box-shadow: rgb(235, 235, 235) 0 0 0 2px;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    transition: .3s box-shadow;
+    &:hover{
+      box-shadow: $color-secondary 0 0 0 2px;
+    }
+  }
+}
